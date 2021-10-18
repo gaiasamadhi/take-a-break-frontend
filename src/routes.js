@@ -7,6 +7,7 @@ import {
 
 import Start from './pages/start';
 import StepOne from './pages/step-one';
+import Activity from './pages/Activity';
 
 function Routes() {
     return (
@@ -16,6 +17,9 @@ function Routes() {
             </Route>
             <Route path="/step-one">
                 <StepOne/>
+            </Route>
+            <Route path="/activity">
+                <Activity />
             </Route>
         </Switch>
     )
