@@ -1,6 +1,5 @@
 import './pages/start';
 import './App.css';
-import Start from './pages/start';
 import Routes from './routes';
 
 function App() {

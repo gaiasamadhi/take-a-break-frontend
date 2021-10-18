@@ -1,8 +1,9 @@
+import HeaderLight from "../components/header-light";
 
 function Start() {
     return (
       <div className="App">
-        <div>We can start programming :-)</div>
+        <HeaderLight/>
       </div>
     );
   }
