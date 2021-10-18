@@ -1,0 +1,12 @@
+.header-button {
+    width: 140px;
+    height: 40px;
+    color: #FFF;
+    background-color: #58417C;
+    border-color: #58417C;
+    box-shadow: 0px 4px 4px 0px #00000040;
+    border-radius: 10px;
+    font-size: 18px;
+    line-height: 27px;
+    margin: 12px 40px 12px 0px;
+}

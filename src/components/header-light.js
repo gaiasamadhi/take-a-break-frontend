@@ -1,4 +1,5 @@
 import './header-light.css';
+import HeaderButton from './header-button';
 
 function HeaderLight() {
     
@@ -6,7 +7,7 @@ function HeaderLight() {
         <div className='header-wrapper'>
             <nav className='header-row'>
                 <li className='header-team'>PEMM</li>
-                <button className='header-button'>Take a break</button>
+                <HeaderButton className='header-button'/>
             </nav>    
         </div>
     )
