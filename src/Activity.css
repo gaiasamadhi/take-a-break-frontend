@@ -3,13 +3,8 @@
 .activityPage {
     display: flex;
     flex-direction: column;
-    /* height: 100vh; */
-    /* width: 100vw; */
-    /* align-items: flex-end; */
-    /* background-image: url(assets/Photo5.png); */
-    /* background-repeat: no-repeat; */
-    /* background-position:bottom; */
   }
+
 .bg {
     display: flex;
     justify-content: center;
@@ -135,4 +130,17 @@ iframe {
 .end-button:hover {
     cursor: pointer;
     background: #6B2929;
+}
+
+.finish {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.finishButtons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 100px;
 }
