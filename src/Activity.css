@@ -1,14 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap');
+
 .activityPage {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    /* height: 100vh; */
     /* width: 100vw; */
     /* align-items: flex-end; */
-    background-image: url(assets/Photo5.png);
-    background-repeat: no-repeat;
-    background-position:bottom;
+    /* background-image: url(assets/Photo5.png); */
+    /* background-repeat: no-repeat; */
+    /* background-position:bottom; */
   }
-
+.bg {
+    display: flex;
+    justify-content: center;
+}
 .restart-button {
     height: 40px;
     width: 140px;
@@ -24,16 +29,16 @@
 }
 .restart-break {
     display: flex;
-    width: 100vw;
+    /* width: 100vw; */
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
 
-.player {
+.player, .break {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     margin: 0px 40px 0px 40px;
 }
 .timer {
@@ -41,8 +46,55 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
-    width: 400px;
+    width: 300px;
+    background: white;
+    border-radius: 10px;
+    box-shadow:  15px 15px 30px #CFC8DB;
+    margin: 0px 10px 0px 10px;
+}
+iframe {
+    margin: 0px 10px 0px 10px;
+    border-radius: 10px;
+    box-shadow: -15px -15px 30px #FAFBFF, 15px 15px 30px #CFC8DB;
+}
+
+.breakDescriptionContainer {
+    border-radius: 10px;
+    background: white;
+    width: 495px;
+    margin: 20px 10px 10px 10px;
+    box-shadow:  15px 15px 30px #CFC8DB;
+}
+.breakDescriptionContainer p {
+    font-family: 'Reem Kufi', sans-serif;
+    text-align: start;
+    margin-right: 5px;
+}
+.activityDescription {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.activityDescription p {
+    font-family: 'Reem Kufi', sans-serif;
+}
+
+.benefitDescription {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.benefitDescription {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.benefitDescription div {
+    display: flex;
+    margin: 15px 15px 15px 15px;
 }
 .clock {
     display: flex;
