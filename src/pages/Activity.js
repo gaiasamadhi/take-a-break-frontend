@@ -62,19 +62,23 @@ export default function Activity() {
         <div className="breakDescriptionContainer">
           <h2>Benefits of Activity</h2>
           <div className="benefitDescription">
-            
-              <div><img src={marker}></img><p>Improvement in energy levels & reaction times</p></div>
-              <div><img src={marker}></img><p>Help metabolism burn fat</p></div>
-              <div><img src={marker}></img><p>Improve physical performance</p></div>
-           
+            <div>
+              <img src={marker}></img>
+              <p>Improvement in energy levels & reaction times</p>
+            </div>
+            <div>
+              <img src={marker}></img>
+              <p>Help metabolism burn fat</p>
+            </div>
+            <div>
+              <img src={marker}></img>
+              <p>Improve physical performance</p>
+            </div>
           </div>
         </div>
       </div>
       <div className="bg">
-        <img
-          src={background}
-         
-        ></img>
+        <img src={background}></img>
       </div>
     </div>
   );

@@ -9,6 +9,7 @@ import Start from './pages/start';
 import StepOne from './pages/step-one';
 import Activity from './pages/Activity';
 import Finish from './pages/Finish';
+import Feedback from './pages/Feedback';
 
 function Routes() {
     return (
@@ -24,6 +25,9 @@ function Routes() {
             </Route>
             <Route path="/finish">
                 <Finish />
+            </Route>
+            <Route path="/feedback">
+                <Feedback />
             </Route>
         </Switch>
     )
