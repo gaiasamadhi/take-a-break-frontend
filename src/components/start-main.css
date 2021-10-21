@@ -4,7 +4,7 @@
 
 }
 .main-row {
-    z-index:1;
+    z-index:99;
     display: flex;
     justify-content: center;
 }
@@ -19,21 +19,23 @@
 .main-row__content {
     width: 51.56%;
     margin-top: 36px;
-    margin-bottom: 100px;
+    margin-bottom: 85px;
     font-size: 24px;
     line-height: 33.75px;
 }
-.main-row-image {
+.main-row-image{
+    
     display:flex;
     justify-content: flex-end;
-    margin-top: -138px;
+    margin-top: -249px;
 }
 
-.main-row-image__wrapper {
-    z-index: 99;
+.main-row-image-wrapper {
+    z-index: 1;
     width:50%;
 }
 
-img {
+.main-row-image-wrapper__image {
+    
     width:100%;
 }

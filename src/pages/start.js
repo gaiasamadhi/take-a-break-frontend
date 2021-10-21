@@ -1,10 +1,10 @@
-import HeaderLight from "../components/header-light";
+import HeaderStart from "../components/header-start";
 import StartMain from "../components/start-main";
 
 function Start() {
     return (
       <div className="App">
-        <HeaderLight/>
+        <HeaderStart/>
         <StartMain/>
       </div>
     );

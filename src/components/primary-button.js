@@ -1,10 +1,10 @@
 import './primary-button.css';
 
-function PrimaryButton() {
+function PrimaryButton(props) {
     return (
-       <>
-            <button className='primary-button'>Start my break</button>
-       </> 
+       <div>
+            <button className='primary-button'>{props.text}</button>
+       </div> 
     )
 };
 
