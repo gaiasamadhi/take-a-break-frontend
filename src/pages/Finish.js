@@ -12,6 +12,7 @@ export default function Finish() {
       <div className="finish">
         <img src={rocket}></img>
         <div className="finishButtons">
+          <h2>Congrats on finishing your activity!</h2>
         <button className="end-button">End break</button>
         <button className="start-button">Try another activity</button>
         <button className="start-button">Repeat this activity</button>

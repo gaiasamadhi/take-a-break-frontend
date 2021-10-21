@@ -1,146 +1,259 @@
-@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap");
 
 .activityPage {
-    display: flex;
-    flex-direction: column;
-  }
+  display: flex;
+  flex-direction: column;
+}
 
 .bg {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 .restart-button {
-    height: 40px;
-    width: 140px;
-    border-radius: 10px;
-    background: #8D3F3F;
-    border: none;
-    color: white;
-    margin: 5px; 
+  height: 40px;
+  width: 140px;
+  border-radius: 10px;
+  background: #8d3f3f;
+  border: none;
+  color: white;
+  margin: 5px;
 }
 .restart-button:hover {
-    cursor: pointer;
-    background: #6B2929;
+  cursor: pointer;
+  background: #6b2929;
 }
 .restart-break {
-    display: flex;
-    /* width: 100vw; */
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  /* width: 100vw; */
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.start-break {
+  height: 40px;
+  width: 140px;
+  border-radius: 10px;
+  background: #58417c;
+  border: none;
+  color: white;
+  margin: 5px;
 }
 
-.player, .break {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 0px 40px 0px 40px;
+.start-break:hover {
+  cursor: pointer;
+  background: #3e2d5a;
+}
+.player,
+.break {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0px 40px 0px 40px;
 }
 .timer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 300px;
-    background: white;
-    border-radius: 10px;
-    box-shadow:  15px 15px 30px #CFC8DB;
-    margin: 0px 10px 0px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 15px 15px 30px #cfc8db;
+  margin: 0px 10px 0px 10px;
 }
 iframe {
-    margin: 0px 10px 0px 10px;
-    border-radius: 10px;
-    box-shadow: -15px -15px 30px #FAFBFF, 15px 15px 30px #CFC8DB;
+  margin: 0px 10px 0px 10px;
+  border-radius: 10px;
+  box-shadow: -15px -15px 30px #fafbff, 15px 15px 30px #cfc8db;
 }
 
 .breakDescriptionContainer {
-    border-radius: 10px;
-    background: white;
-    width: 495px;
-    margin: 20px 10px 10px 10px;
-    box-shadow:  15px 15px 30px #CFC8DB;
+  border-radius: 10px;
+  background: white;
+  width: 495px;
+  margin: 20px 10px 10px 10px;
+  box-shadow: 15px 15px 30px #cfc8db;
 }
 .breakDescriptionContainer p {
-    font-family: 'Reem Kufi', sans-serif;
-    text-align: start;
-    margin-right: 5px;
+  font-family: "Reem Kufi", sans-serif;
+  text-align: start;
+  margin-right: 5px;
 }
 .activityDescription {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 }
 .activityDescription p {
-    font-family: 'Reem Kufi', sans-serif;
+  font-family: "Reem Kufi", sans-serif;
 }
 
 .benefitDescription {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
 }
 .benefitDescription {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 .benefitDescription div {
-    display: flex;
-    margin: 15px 15px 15px 15px;
+  display: flex;
+  margin: 15px 15px 15px 15px;
 }
 .clock {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 187px;
-    height: 187px;
-    border: 9px solid #786598;
-    border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 187px;
+  height: 187px;
+  border: 9px solid #786598;
+  border-radius: 50%;
 }
 .clock h1 {
-    color: #786598; 
+  color: #786598;
 }
 
 .start-button {
+  width: 280px;
+  height: 64px;
+  border-radius: 20px;
+  border: none;
+  background: #786598;
+  color: white;
+  margin: 5px;
+}
+.start-button:hover {
+  cursor: pointer;
+  background: #3e2d5a;
+}
+.end-button {
+  width: 280px;
+  height: 64px;
+  border-radius: 20px;
+  border: none;
+  background: #8d3f3f;
+  color: white;
+  margin: 5px;
+}
+.end-button:hover {
+  cursor: pointer;
+  background: #6b2929;
+}
+
+.finish {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.finishButtons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 100px;
+}
+.finishButtons h2 {
+    margin-bottom: 100px;
+}
+.feedback {
+  position: relative;
+}
+#mark {
+  -webkit-appearance: none;
+  background: transparent;
+  color: black;
+  width: 300px;
+  height: 40px;
+}
+input[type="range"]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid #000000;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+  margin-top: -11px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 20px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #57417c;
+  border-radius: 10px;
+  border: 0.2px solid #010101;
+}
+input[type="range"]:focus::-webkit-slider-runnable-track {
+    background: #57417c;
+}
+input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 20px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+ 
+  background: #57417c;
+  border-radius: 10px;
+  border: 0.2px solid #010101;
+}
+input[type="range"]::-webkit-slider-thumb::before {
+  position: absolute;
+  content: "";
+  height: 10px; /* equal to height of runnable track */
+  width: 500px; /* make this bigger than the widest range input element */
+  left: -502px; /* this should be -2px - width */
+  top: 8px; /* don't change this */
+  background: #777;
+}
+.activityPage textarea {
+    /* -webkit-appearance: none; */
+    resize: none;
+    width: 500px;
+    border: none;
+    border-radius: 16px;
+    padding: 10px;
+}
+.activityPage textarea:focus {
+    outline: #57417c;
+    box-shadow: 0 0 10px #57417c;
+    /* border-color: #57417c; */
+}
+.comment {
+    align-self: center;
+    width: 500px;
+}
+
+.comment h4 {
+    text-align: left;
+}
+
+.feedback-button {
     width: 280px;
     height: 64px;
     border-radius: 20px;
     border: none;
     background: #786598;
     color: white;
-    margin: 5px;
+    margin: 50px 5px 5px 5px;
 }
-.start-button:hover{
+.feedback-button:hover {
     cursor: pointer;
-    background: #3E2D5A;
-    
-}
-.end-button {
-    width: 280px;
-    height: 64px;
-    border-radius: 20px;
-    border: none;  
-    background: #8D3F3F;
-    color: white;
-    margin: 5px;
-}
-.end-button:hover {
-    cursor: pointer;
-    background: #6B2929;
-}
-
-.finish {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-.finishButtons {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-right: 100px;
 }
