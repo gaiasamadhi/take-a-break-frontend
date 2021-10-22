@@ -19,7 +19,7 @@ export default function Feedback() {
     console.log(e.target.value);
   };
   return (
-    <div className="activityPage">
+    <div className="feedbackPage">
       <div className="restart-break">
         <h4>PEMM</h4>
         <button className="start-break">Take a break</button>
@@ -43,11 +43,13 @@ export default function Feedback() {
         <textarea
           rows="6"
           cols="40"
-          placeholder="What did you like?&#10;What did you not like about the process?&#10;How accurate were your recommendations?" //&#10; -new line html entity 
+          placeholder="What did you like?&#10;What did you not like about the process?&#10;How accurate were your recommendations?" //&#10; -new line html entity
         />
-           <button className="feedback-button">
-            Submit feedback
-          </button>
+
+        <button className="feedback-button">Submit feedback</button>
+      </div>
+      <div>
+        <button className="back">Back to last step</button>
       </div>
     </div>
   );

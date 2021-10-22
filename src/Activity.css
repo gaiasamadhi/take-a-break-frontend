@@ -1,10 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap");
 
-.activityPage {
+.activityPage, .feedbackPage, .feedbackPage2 {
   display: flex;
   flex-direction: column;
 }
-
+.feedbackPage {
+  height: 90vh;
+  background-image:url('/src/assets/Photo7.png');
+  background-repeat:no-repeat;
+  background-position:right bottom;
+}
+.feedbackPage2 {
+  height: 100vh;
+  background-image:url('/src/assets/Saly-6.png');
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size: 60%;
+}
 .bg {
   display: flex;
   justify-content: center;
@@ -28,6 +40,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  background: white;
 }
 .start-break {
   height: 40px;
@@ -223,15 +236,16 @@ input[type="range"]::-webkit-slider-thumb::before {
   top: 8px; /* don't change this */
   background: #777;
 }
-.activityPage textarea {
-    /* -webkit-appearance: none; */
+.feedbackPage textarea {
+    font-size: 14px;
+    font-family: "Reem Kufi", sans-serif;
     resize: none;
     width: 500px;
     border: none;
     border-radius: 16px;
     padding: 10px;
 }
-.activityPage textarea:focus {
+.feedbackPage textarea:focus {
     outline: #57417c;
     box-shadow: 0 0 10px #57417c;
     /* border-color: #57417c; */
@@ -256,4 +270,21 @@ input[type="range"]::-webkit-slider-thumb::before {
 }
 .feedback-button:hover {
     cursor: pointer;
+    background: #3E2D5A;
+}
+.back {
+  font-family: "Reem Kufi", sans-serif;
+  font-size: 20px;
+  align-self: left;
+  float: left;
+  background: none;
+  padding: 10px;
+  margin: 10px 10px 0px 10px ;
+  border: none;
+  border-radius: 16px;
+}
+
+.back:hover {
+  cursor: pointer;
+  background: white;
 }
