@@ -1,6 +1,6 @@
 import "../Activity.css";
 import { useState, useEffect } from "react";
-
+import arrow from '../assets/Arrow.png'
 export default function Feedback() {
   const [value, setValue] = useState({ mark: 0, label: "" });
   const [text, setText] = useState("");
@@ -49,7 +49,7 @@ export default function Feedback() {
         <button className="feedback-button">Submit feedback</button>
       </div>
       <div>
-        <button className="back">Back to last step</button>
+        <button className="back"><img src={arrow} style={{width: "27px", height: "18px"}}/>Back to last step</button>
       </div>
     </div>
   );
