@@ -10,6 +10,7 @@ import StepOne from './pages/step-one';
 import Activity from './pages/Activity';
 import Finish from './pages/Finish';
 import Feedback from './pages/Feedback';
+import FeedbackFinish from './pages/FeedbackFinish';
 
 function Routes() {
     return (
@@ -28,6 +29,9 @@ function Routes() {
             </Route>
             <Route path="/feedback">
                 <Feedback />
+            </Route>
+            <Route path="/submitted">
+                <FeedbackFinish />
             </Route>
         </Switch>
     )
