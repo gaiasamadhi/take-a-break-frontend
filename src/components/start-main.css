@@ -24,7 +24,6 @@
     line-height: 33.75px;
 }
 .main-row-image{
-    
     display:flex;
     justify-content: flex-end;
     margin-top: -249px;
@@ -36,6 +35,5 @@
 }
 
 .main-row-image-wrapper__image {
-    
     width:100%;
 }

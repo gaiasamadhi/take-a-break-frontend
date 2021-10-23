@@ -20,11 +20,9 @@ function SymptomsMain() {
             <div className='symptoms-main-row'>
                 <BrowseSymptomsContainer/>
             </div>
-            <div className='symptoms-main-row'>
-                <PrimaryButton text='Confirm symptom'/>
-            </div>
             <div className='symptoms-main-row-custom'>
                 <Link to='/step-three'><SecondaryButton text='Back to previous question'/></Link>
+                <PrimaryButton text='Confirm symptom'/>
                 <div className='symptoms-main-row-custom-wrapper'>
                     <img className='symptoms-main-row-custom-wrapper__image' src={paper} alt='Paper'/>
                 </div>    

@@ -25,29 +25,6 @@ const BrowseSymptomsContainer = () => {
                     setFetchStatus('FAILED');
                 })
         }, []);
-        
-        console.log('data', symptoms) 
-        console.log('status', fetchStatus)
-        console.log('error', errMessage) 
-        
-        let entries = 0;
-        const findEntries = () => {
-            return symptoms.map(entry => entries = Object.entries(entry))
-        }
-        console.log('entries',findEntries())
-        
-        const renderEntries = () => {
-            findEntries()
-            return entries.map((rows) => (
-                    <div className='keypad-row'>
-                        {rows.map((row) => <div className='keypad-row__button'>{row}</div>)}       
-                    </div>
-                )
-            )
-        };
-        const symptomsArray = symptoms.map((entry,idx) => entry.name)
-        console.log('symptomsArray',symptomsArray) 
-        
 
   return (
     <div className='browse-symptoms-main-row'>      
