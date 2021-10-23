@@ -1,0 +1,29 @@
+.header-restart-wrapper {
+    width: 100%;
+    background-color: #FFF;
+}
+.header-restart-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-restart-row__team {
+    list-style-type: none;
+    font-size: 24px;
+    line-height: 36px;
+    margin: 12px 0px 12px 40px; 
+}
+
+.header-restart-row__button {
+    font-family: inherit;
+    width: 140px;
+    height: 40px;
+    color: #FFF;
+    background-color: #8D3F3F;
+    border-color: #8D3F3F;
+    border-radius: 10px;
+    font-size: 18px;
+    line-height: 27px;
+    margin: 12px 40px 12px 0px;
+    border: none;
+}

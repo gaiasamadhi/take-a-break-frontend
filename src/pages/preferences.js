@@ -1,13 +1,13 @@
 import HeaderRestart from '../components/header-restart';
-import StepOneMain from '../components/step-one-main';
+import PreferencesMain from '../components/preferences-main';
 
-function StepOne() {
+function Preferences() {
     return (
       <div className="App">
         <HeaderRestart/>
-        <StepOneMain/>
+        <PreferencesMain/>
       </div>
     );
   }
   
-  export default StepOne;
+  export default Preferences;

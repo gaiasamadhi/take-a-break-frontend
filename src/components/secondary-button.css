@@ -1,0 +1,26 @@
+.secondary-button {
+    font-family: inherit;
+    width: 328px;
+    height: 60px;
+    color: #000;
+    background-color: #F1EEF8;
+    border-color: ##F1EEF8;
+    border-radius: 10px;
+    font-size: 24px;
+    line-height: 36px;
+    border: 1px solid #F1EEF8;
+    box-shadow: -5px -5px 10px 0px #EAEAEA;
+    transition: all 0.5s;
+    margin: 25px 0px 36px 0px;
+
+}
+
+.secondary-button {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+}
+
+.secondary-button:hover {
+    box-shadow: 5px 5px 10px 0px #A6ABBD;
+}

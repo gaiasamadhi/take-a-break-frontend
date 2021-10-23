@@ -1,8 +1,11 @@
+import HeaderStart from "../components/header-start";
+import StartMain from "../components/start-main";
 
 function Start() {
     return (
       <div className="App">
-        <div>We can start programming :-)</div>
+        <HeaderStart/>
+        <StartMain/>
       </div>
     );
   }

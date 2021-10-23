@@ -1,13 +1,13 @@
 import HeaderRestart from '../components/header-restart';
-import StepOneMain from '../components/step-one-main';
+import StepThreeMain from '../components/step-three-main';
 
-function StepOne() {
+function StepThree() {
     return (
       <div className="App">
         <HeaderRestart/>
-        <StepOneMain/>
+        <StepThreeMain/>
       </div>
     );
   }
   
-  export default StepOne;
+  export default StepThree;
