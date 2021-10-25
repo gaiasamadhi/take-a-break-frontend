@@ -7,10 +7,12 @@ import { Link } from 'react-router-dom';
 import './step-two-main.css';
 
 
-function StepTwoMain({activity, shortBreak, mediumBreak, longBreak}) {
-    console.log(shortBreak)
-    console.log(mediumBreak)
-    console.log(longBreak)
+function StepTwoMain({activity, shortBreak, mediumBreak, longBreak }) {
+    const randomActivity = activity[Math.floor(Math.random()*activity.length)]
+    // console.log(shortBreak)
+    // console.log(mediumBreak)
+    // console.log(longBreak)
+    console.log(randomActivity._id)
     return (
         <div className='step-two-main-wrapper'>
             <div className='step-two-main-row'>
@@ -22,7 +24,7 @@ function StepTwoMain({activity, shortBreak, mediumBreak, longBreak}) {
             <div className='step-two-main-row'>
                 <div className='step-two-main-row__column'>
                     <Link to='/step-three'><PrimaryButton text='Recommended activity'/></Link>
-                    <PrimaryButton text='Random activity'/>
+                    <Link to={`/activity/${randomActivity._id}`}><PrimaryButton text='Random activity'/></Link>
                 </div>
             </div>    
             <div className='step-two-main-row-image'>

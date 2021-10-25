@@ -34,8 +34,8 @@ function Routes() {
       );
     },[])
     const [shortBreak, setShortBreak] = useState([])
-    const [mediumBreak, setMediumBreak] = useState(activity)
-    const [longBreak, setLongBreak] = useState(activity)
+    const [mediumBreak, setMediumBreak] = useState([])
+    const [longBreak, setLongBreak] = useState([])
 
     const history = useHistory()
     const handleBreakDuration1 = () => {
@@ -71,8 +71,8 @@ function Routes() {
             <Route path="/step-three">
                 <StepThree/>
             </Route>
-            <Route path="/activity">
-                <Activity />
+            <Route path="/activity/:id">
+                <Activity activity={activity} />
             </Route>
             <Route path="/finish">
                 <Finish />
