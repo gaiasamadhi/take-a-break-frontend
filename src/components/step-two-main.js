@@ -7,7 +7,10 @@ import { Link } from 'react-router-dom';
 import './step-two-main.css';
 
 
-function StepTwoMain() {
+function StepTwoMain({activity, shortBreak, mediumBreak, longBreak}) {
+    console.log(shortBreak)
+    console.log(mediumBreak)
+    console.log(longBreak)
     return (
         <div className='step-two-main-wrapper'>
             <div className='step-two-main-row'>
