@@ -9,9 +9,7 @@ import './step-two-main.css';
 
 function StepTwoMain({activity, shortBreak, mediumBreak, longBreak }) {
     const randomActivity = activity[Math.floor(Math.random()*activity.length)]
-    // console.log(shortBreak)
-    // console.log(mediumBreak)
-    // console.log(longBreak)
+
     console.log(randomActivity._id)
     return (
         <div className='step-two-main-wrapper'>

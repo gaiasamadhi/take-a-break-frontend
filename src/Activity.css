@@ -22,8 +22,14 @@
   background-size: 60%;
 }
 .bg {
+  overflow: "hidden";
+  height: 250px;
   display: flex;
   justify-content: center;
+}
+.bg img {
+  overflow: "hidden";
+  margin: -300px 0px 0px -180px;
 }
 .restart-button {
   height: 40px;
@@ -40,11 +46,22 @@
 }
 .restart-break {
   display: flex;
+  /* width: 100vw; */
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+}
+.take-break {
+  display: flex;
   width: 100vw;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   background: white;
+}
+.restart-break h4, .take-break h4 {
+  margin: 10px;
 }
 .start-break {
   height: 40px;
@@ -72,14 +89,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 300px;
+  /* width: 300px; */
   background: white;
   border-radius: 10px;
   box-shadow: 15px 15px 30px #cfc8db;
-  margin: 0px 10px 0px 10px;
+  margin: 10px 10px 0px 10px;
 }
 iframe {
-  margin: 0px 10px 0px 10px;
+  margin: 10px 10px 0px 10px;
   border-radius: 10px;
   box-shadow: -15px -15px 30px #fafbff, 15px 15px 30px #cfc8db;
 }
@@ -87,7 +104,7 @@ iframe {
 .breakDescriptionContainer {
   border-radius: 10px;
   background: white;
-  width: 495px;
+  width: 412px;
   margin: 20px 10px 10px 10px;
   box-shadow: 15px 15px 30px #cfc8db;
   display: flex;
@@ -96,7 +113,10 @@ iframe {
 .breakDescriptionContainer p {
   font-family: "Reem Kufi", sans-serif;
   text-align: start;
-  margin-right: 5px;
+  margin: 10px;
+}
+.breakDescriptionContainer h2 {
+  text-align: center;
 }
 .activityDescription {
   display: flex;
@@ -123,14 +143,14 @@ iframe {
 }
 .benefitDescription div {
   display: flex;
-  margin: 15px 15px 15px 15px;
+  margin: 5px;
 }
 .clock {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 187px;
-  height: 187px;
+  width: 160px;
+  height: 160px;
   border: 9px solid #786598;
   border-radius: 50%;
 }
@@ -139,8 +159,8 @@ iframe {
 }
 
 .start-button {
-  width: 280px;
-  height: 64px;
+  width: 230px;
+  height: 50px;
   border-radius: 20px;
   border: none;
   background: #786598;
@@ -152,8 +172,8 @@ iframe {
   background: #3e2d5a;
 }
 .end-button {
-  width: 280px;
-  height: 64px;
+  width: 230px;
+  height: 50px;
   border-radius: 20px;
   border: none;
   background: #8d3f3f;
@@ -304,11 +324,11 @@ input[type="range"]::-webkit-slider-thumb::before {
   flex-direction: column;
   justify-content: center;
   align-items: center;  
-  margin-top: 100px;
+  margin-top: 6.5vw;
 }
 .finalMessage h2, .finalMessage h3 {
-  width: 350px;
-  margin: 10px 10px 10px 450px;
+  width: 22vw;
+  margin: 0.6vw 0.6vw 0.6vw 29vw;
   -ms-transform: rotate(15deg); /* IE 9 */
   transform: rotate(-18deg);
   color: white;

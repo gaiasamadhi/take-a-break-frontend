@@ -3,12 +3,12 @@ import Countdown, { zeroPad } from "react-countdown";
 import activityPic from "../assets/coffee-cup.png";
 import marker from "../assets/Photo1.png";
 import background from "../assets/Photo5.png";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 
 export default function Activity({ activity }) {
   const timerRef = useRef();
-  const handleStart = () => timerRef.current.start();
+  const handleStart = () => {timerRef.current.start(); setAutoplay("?autoplay=1")};
   const handlePause = () => timerRef.current.pause();
   const renderer = ({ minutes, seconds }) => (
     <span>
@@ -19,6 +19,7 @@ export default function Activity({ activity }) {
   const activityID = useParams();
   const filteredActivity = activity.filter((act) => act._id === activityID.id);
   console.log(filteredActivity);
+  const [autoplay, setAutoplay] = useState("")
   return (
     <div className="activityPage">
       <div className="restart-break">
@@ -29,9 +30,9 @@ export default function Activity({ activity }) {
         <>
           <div className="player">
             <iframe
-              width="690"
-              height="390"
-              src={"https://www.youtube.com/embed/" + act.source.slice(32)}
+              width="585"
+              height="330"
+              src={"https://www.youtube.com/embed/" + act.source.slice(32) + autoplay}
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -62,7 +63,7 @@ export default function Activity({ activity }) {
             <div className="breakDescriptionContainer">
               <h2>{act.name}</h2>
               <div className="activityDescription">
-                <img src={activityPic}></img>
+                {/* <img src={activityPic}></img> */}
                 <p>{act.description}</p>
               </div>
             </div>
@@ -79,7 +80,7 @@ export default function Activity({ activity }) {
             </div>
           </div>
           <div className="bg">
-            <img src={background}></img>
+            <img style={{}}src={background}></img>
           </div>
         </>
       ))}
