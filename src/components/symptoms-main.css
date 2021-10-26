@@ -19,7 +19,7 @@
 
 .symptoms-main-row__content {
     margin-top: 72px;
-    margin-bottom: 85px;
+    margin-bottom: 0px;
     font-size: 36px;
     line-height: 54px;
 }
@@ -28,12 +28,22 @@
     text-decoration: underline;
 }
 
-.browse-symptoms-main-row {
-    width: 50%;
+.symptoms-main-checkbox {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 75px;
+}
+
+.symptoms-main-checkbox-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.symptoms-main-checkbox-column-row {
+    display: flex;
+    justify-content: flex-start;
     align-items: center;
+    margin-bottom: 8px;
 }
 
 .browse-symptoms-main-row__checkbox {
@@ -41,7 +51,9 @@
     line-height: 36px;
 }
 .browse-symptoms-main-row__label {
-    margin: 0px 20px 0px 15px; 
+    margin: 0px 0px 0px 25px; 
+    font-size: 24px;
+    line-height: 36px;
 }
 .browse-symptoms-main-row__input {
     width: 40px;
@@ -56,13 +68,13 @@
 
 .symptoms-main-row-custom {
     z-index: 99;
+    padding-top: 15px;
     display: flex;
     justify-content: space-between;
-    
 }
 
 .symptoms-main-row-custom-wrapper {
-    margin-top: -380px;
+    margin-top: -248px;
     width: 22%;
 }
 
