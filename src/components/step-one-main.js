@@ -3,10 +3,11 @@ import photo from '../assets/Photo-two.png';
 import calendar from '../assets/Saly.png';
 import PrimaryButton from './primary-button';
 import { Link } from 'react-router-dom';
-
+import { useState } from 'react';
 import './step-one-main.css';
 
-function StepOneMain() {
+function StepOneMain({handleBreakDuration1, handleBreakDuration2, handleBreakDuration3}) {
+
     return (
         <div className='step-one-main-wrapper'>
             <div className='step-one-main-row'>
@@ -20,9 +21,9 @@ function StepOneMain() {
                     <img className='step-one-main-row-wrapper__image__one' src={photo} alt='Person walking'/>
                 </div>    
                 <div className='step-one-main-row-wrapper'>
-                    <Link to='/step-two'><PrimaryButton text='0 - 5 minutes'/></Link>
-                    <Link to='/step-two'><PrimaryButton text='5 - 15 minutes'/></Link>
-                    <Link to='/step-two'><PrimaryButton text='15 - 30 minutes'/></Link>
+                    <button onClick={handleBreakDuration1} className="primary-button" text='0 - 5 minutes' > 0 - 5 minutes</button>
+                    <button onClick={handleBreakDuration2} className="primary-button" text='5 - 15 minutes'> 5 - 15 minutes </button>
+                    <button onClick={handleBreakDuration3} className="primary-button" text='15 - 30 minutes'> 15 - 30 minutes</button> 
                 </div>
                 <div className='step-one-main-row-wrapper'>
                     <img className='step-one-main-row-wrapper__image__two' src={calendar} alt='Calendar'/>

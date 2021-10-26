@@ -1,10 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap");
 
-.activityPage, .feedbackPage, .feedbackPage2 {
+.activityPage, .feedbackPage2 {
   display: flex;
   flex-direction: column;
 }
 .feedbackPage {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
   height: 100vh;
   background-image:url('/src/assets/Photo7.png');
   background-repeat:no-repeat;
@@ -36,7 +40,7 @@
 }
 .restart-break {
   display: flex;
-  /* width: 100vw; */
+  width: 100vw;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -263,6 +267,8 @@ input[type="range"]::-webkit-slider-thumb::before {
 }
 
 .feedback-button {
+    font-family: inherit;
+    font-size: 24px;
     width: 280px;
     height: 64px;
     border-radius: 20px;
@@ -310,4 +316,8 @@ input[type="range"]::-webkit-slider-thumb::before {
 .finalMessage h2 {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+.go-back-btn {
+  align-self: flex-start;
 }

@@ -1,28 +1,56 @@
 import "../Activity.css";
 import { useState, useEffect } from "react";
-import arrow from '../assets/Arrow.png'
-export default function Feedback() {
-  const [value, setValue] = useState({ mark: 0, label: "" });
-  const [text, setText] = useState("");
-  const feedback = ["very unhelpful", "unhelpful", "helpful", "very helpful"];
-  var textAreas = document.getElementsByTagName("textarea");
+import { Link } from 'react-router-dom';
+import arrow from '../assets/Arrow.png';
+import axios from 'axios';
 
-  Array.prototype.forEach.call(textAreas, function (elem) {
-    elem.placeholder = elem.placeholder.replace(/\\n/g, "\n");
-  });
+export default function Feedback() {
+  const feedbackAPI = 'https://recharge-backend1.herokuapp.com/feedback';
+  
+  const [value, setValue] = useState({ label: "", mark: 0, comment: "" });
+  const feedback = ["very unhelpful &#128542", "unhelpful", "helpful", "very helpful"];
+
+  function submitFeedback(e){
+    e.preventDefault();
+    axios
+      .post(feedbackAPI, {
+        label: value.label,
+        mark: value.mark,
+        comment: value.comment
+      })
+      .then((res) => {
+        console.log(res.data);
+      })
+      .catch((error) => {
+        if (error.response) {
+          console.log(error.response);
+        } else if (error.request) {
+          console.log(error.request);
+        } else if (error.message) {
+          console.log(error.message);
+        }
+      });
+  }
+
   const handleChange = (e) => {
     setValue({
       ...value,
-      mark: e.target.value,
       label: feedback[e.target.value],
+      mark: e.target.value,
     });
-    console.log(e.target.value);
   };
+  const handleComment = (e) => {
+    setValue({
+      ...value,
+      comment: e.target.value
+    })
+  }
+  console.log(value);
   return (
     <div className="feedbackPage">
       <div className="restart-break">
         <h4>PEMM</h4>
-        <button className="start-break">Take a break</button>
+        <Link to="/step-one"><button className="start-break">Take a break</button></Link>
       </div>
       <h1>How much did this activity help you?</h1>
       <h4>This will help us make better recommendations in the future.</h4>
@@ -40,15 +68,18 @@ export default function Feedback() {
       </div>
       <div className="comment">
         <h4>Add additional comments (optional):</h4>
+        <form onSubmit={submitFeedback}>
         <textarea
+          onChange={handleComment}
           rows="6"
           cols="40"
           placeholder="What did you like?&#10;What did you not like about the process?&#10;How accurate were your recommendations?" //&#10; -new line html entity
         />
 
         <button className="feedback-button">Submit feedback</button>
+        </form>
       </div>
-      <div>
+      <div className="go-back-btn">
         <button className="back"><img src={arrow} style={{width: "27px", height: "18px"}}/>Back to last step</button>
       </div>
     </div>
