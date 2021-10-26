@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/static/css/main.69e69cd3.chunk.css",
+    "main.js": "/static/js/main.ffc9efca.chunk.js",
+    "main.js.map": "/static/js/main.ffc9efca.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.e29d9b42.js",
+    "runtime-main.js.map": "/static/js/runtime-main.e29d9b42.js.map",
+    "static/js/2.be3d12a1.chunk.js": "/static/js/2.be3d12a1.chunk.js",
+    "static/js/2.be3d12a1.chunk.js.map": "/static/js/2.be3d12a1.chunk.js.map",
+    "static/js/3.617bcae6.chunk.js": "/static/js/3.617bcae6.chunk.js",
+    "static/js/3.617bcae6.chunk.js.map": "/static/js/3.617bcae6.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.69e69cd3.chunk.css.map": "/static/css/main.69e69cd3.chunk.css.map",
+    "static/js/2.be3d12a1.chunk.js.LICENSE.txt": "/static/js/2.be3d12a1.chunk.js.LICENSE.txt",
+    "static/media/Arrow-left.dc9df2cc.svg": "/static/media/Arrow-left.dc9df2cc.svg",
+    "static/media/Arrow.2f3f66ca.png": "/static/media/Arrow.2f3f66ca.png",
+    "static/media/Photo-four.60ad2058.png": "/static/media/Photo-four.60ad2058.png",
+    "static/media/Photo-one.aa2a692b.png": "/static/media/Photo-one.aa2a692b.png",
+    "static/media/Photo-two.517d5beb.png": "/static/media/Photo-two.517d5beb.png",
+    "static/media/Photo5.1a93a189.png": "/static/media/Photo5.1a93a189.png",
+    "static/media/Photo6.ac2695e0.png": "/static/media/Photo6.ac2695e0.png",
+    "static/media/Activity.css": "/static/media/Saly-6.3ac61e33.png",
+    "static/media/Progress-bar-preferences.d6441df6.svg": "/static/media/Progress-bar-preferences.d6441df6.svg",
+    "static/media/Progress-bar-step-four.d6441df6.svg": "/static/media/Progress-bar-step-four.d6441df6.svg",
+    "static/media/Progress-bar-step-three.52d921bc.svg": "/static/media/Progress-bar-step-three.52d921bc.svg",
+    "static/media/Progress-bar-step-two.167229ae.svg": "/static/media/Progress-bar-step-two.167229ae.svg",
+    "static/media/Progress-bar.55b1b851.svg": "/static/media/Progress-bar.55b1b851.svg",
+    "static/media/Saly-44.1b334c75.png": "/static/media/Saly-44.1b334c75.png",
+    "static/media/Saly-greeting.c14a0c4f.png": "/static/media/Saly-greeting.c14a0c4f.png",
+    "static/media/Saly-hands.686d9bdc.png": "/static/media/Saly-hands.686d9bdc.png",
+    "static/media/Saly-saly.0bdbe34d.png": "/static/media/Saly-saly.0bdbe34d.png",
+    "static/media/Saly.7c81011d.png": "/static/media/Saly.7c81011d.png",
+    "static/media/coffee-cup.fa81cfdd.png": "/static/media/coffee-cup.fa81cfdd.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e29d9b42.js",
+    "static/js/2.be3d12a1.chunk.js",
+    "static/css/main.69e69cd3.chunk.css",
+    "static/js/main.ffc9efca.chunk.js"
+  ]
+}
