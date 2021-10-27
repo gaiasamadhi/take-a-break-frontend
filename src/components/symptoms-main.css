@@ -1,7 +1,10 @@
 .symptoms-main-wrapper {
     width: 100%;
     background: #F1EEF8;
-
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    /* align-items: center; */
 }
 
 .symptoms-main-row {
@@ -30,8 +33,17 @@
 
 .symptoms-main-checkbox {
     display: flex;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
     margin-bottom: 75px;
+    width: 60vw;
+    justify-content: flex-start;
+}
+.big-checkbox {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
 }
 
 .symptoms-main-checkbox-column {
@@ -58,7 +70,9 @@
 .browse-symptoms-main-row__input {
     width: 40px;
     height: 40px;
-    border-radius: 10px;
+}
+.goal {
+    width: 300px;
 }
 
 .checkbox:checked:before {

@@ -63,13 +63,13 @@ function Routes() {
                 <StepTwo shortBreak={shortBreak} mediumBreak={mediumBreak} longBreak={longBreak} activity={activity}/>
             </Route>
             <Route path="/step-four/symptoms">
-                <Symptoms/>
+                <Symptoms activity={activity}/>
             </Route>
             <Route path="/step-four/:preferences">
                 <Preferences/>
             </Route>
             <Route path="/step-three">
-                <StepThree/>
+                <StepThree activity={activity}/>
             </Route>
             <Route path="/activity/:id">
                 <Activity activity={activity} />

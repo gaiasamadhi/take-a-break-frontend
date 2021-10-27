@@ -1,11 +1,11 @@
 import HeaderRestart from '../components/header-restart';
 import StepThreeMain from '../components/step-three-main';
 
-function StepThree() {
+function StepThree({activity}) {
     return (
       <div className="App">
         <HeaderRestart/>
-        <StepThreeMain/>
+        <StepThreeMain activity={activity}/>
       </div>
     );
   }

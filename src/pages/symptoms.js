@@ -1,11 +1,11 @@
 import HeaderRestart from '../components/header-restart';
 import SymptomsMain from '../components/symptoms-main';
 
-function Symptoms() {
+function Symptoms({activity}) {
     return (
       <div className="App">
         <HeaderRestart/>
-        <SymptomsMain/>
+        <SymptomsMain activity={activity}/>
       </div>
     );
   }

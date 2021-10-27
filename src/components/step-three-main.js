@@ -7,7 +7,8 @@ import { Link } from 'react-router-dom';
 import './step-three-main.css';
 
 
-function StepThreeMain() {
+function StepThreeMain({activity}) {
+    console.log(activity)
     return (
         <div className='step-three-main-wrapper'>
             <div className='step-three-main-row'>

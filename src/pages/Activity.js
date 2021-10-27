@@ -1,7 +1,7 @@
 import "../Activity.css";
 import Countdown, { zeroPad } from "react-countdown";
 import activityPic from "../assets/coffee-cup.png";
-import marker from "../assets/Photo1.png";
+import marker from "../assets/plus_1.png";
 import background from "../assets/Photo5.png";
 import { useRef, useState } from "react";
 import { useParams, Link } from "react-router-dom";
@@ -71,8 +71,8 @@ export default function Activity({ activity }) {
               <h2>Benefits of Activity</h2>
               <div className="benefitDescription">
                 {act.benefits.map((b) => (
-                  <div>
-                    <img src={marker}></img>
+                  <div className="benefitContainer">
+                    <img src={marker} style={{width: "25px", height: "25px"}}></img>
                     <p>{b.name}</p>
                   </div>
                 ))}
