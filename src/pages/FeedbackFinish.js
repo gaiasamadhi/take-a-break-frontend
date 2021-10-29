@@ -9,9 +9,7 @@ export default function FeedbackFinish() {
           <button className="start-break">Take a break</button>
         </Link>
       </div>
-      <div className="finalMessage">
-        <h2>Feedback submitted.</h2>
-        <h3>Now go out and do some great work!</h3>
+      <div className="finalMessage">       
       </div>
     </div>
   );

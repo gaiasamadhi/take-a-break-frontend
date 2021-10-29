@@ -1,7 +1,14 @@
 .step-two-main-wrapper {
     width: 100%;
     background: #F1EEF8;
-
+    background-image: url("../assets/Saly-greeting.png");
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: 33%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 .step-two-main-row {
     display: flex;
@@ -10,10 +17,10 @@
     
 }
 
-.step-two-main-row__image {
+/* .step-two-main-row__image {
     margin-top: 80px;
     width: 61.66%;
-}
+} */
 
 .step-two-main-row__content {
     margin-top: 72px;
@@ -33,17 +40,18 @@
 }
 
 .step-two-main-row-image {
-    z-index: 99;
+    /* z-index: 99; */
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-top: -350px;
+    /* height: 50%; */
+    /* justify-content: space-between; */
+    /* align-items: flex-end; */
+    /* margin-top: -350px; */
 }
 
-.step-two-main-row-image-wrapper {
+/* .step-two-main-row-image-wrapper {
     z-index: 99;
     width: 50%;
 }
 .step-two-main-row-image-wrapper__image {
     width: 100%;
-}
+} */
