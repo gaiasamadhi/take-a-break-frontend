@@ -20,14 +20,14 @@ function StepThreeMain({activity}) {
             <div className='step-three-main-row'>
                 <div className='step-three-main-row__column'>
                     <Link to='/step-four/preferences'><PrimaryButton text='Based on preferences'/></Link>
-                    <Link to='/step-four/symptoms'><PrimaryButton text='Based on symptoms'/></Link>
+                    <Link to='/step-four/symptoms'><PrimaryButton text='Based on goals'/></Link>
                 </div>
             </div>
             <div className='step-three-main-row-custom'>
                 <Link to='/step-two'><SecondaryButton text='Back to previous question'/></Link>
-                <div className='step-three-main-row-custom-wrapper'>
+                {/* <div className='step-three-main-row-custom-wrapper'>
                     <img className='step-three-main-row-custom-wrapper__image'src={walk} alt='Person walking'/>
-                </div>    
+                </div>     */}
             </div>
         </div>        
     )
