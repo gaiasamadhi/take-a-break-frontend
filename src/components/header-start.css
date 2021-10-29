@@ -25,4 +25,9 @@
     font-size: 18px;
     line-height: 27px;
     margin: 12px 40px 12px 0px;
+    cursor: pointer;
+}
+
+.header-row__button:hover {
+    background: #3E2D5A;
 }

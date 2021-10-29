@@ -1,7 +1,6 @@
 .step-one-main-wrapper {
     width: 100%;
     background: #F1EEF8;
-
 }
 .step-one-main-row {
     display: flex;
@@ -10,10 +9,10 @@
     
 }
 
-.step-one-main-row__image {
-    margin-top: 80px;
-    width: 61.66%;
-}
+ .step-one-main-row__image {
+    margin-top: 10px;
+    /* width: 61.66%; */
+} 
 
 .step-one-main-row__content {
     margin-top: 72px;
@@ -33,10 +32,10 @@
 }
 
 .step-one-main-row-wrapper__image__one {
-    width: 100%;
+    width: 73%;
 }
 .step-one-main-row-wrapper__image__two {
-    width: 75%;
+    width: 73%;
 }
 
 .step-one-main-row__column__button {
