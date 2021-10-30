@@ -54,12 +54,12 @@ function StepTwoMain({ activity, shortBreak, mediumBreak, longBreak }) {
             </div>
           </div>
           <div className="step-two-main-row">
-            <div className="step-two-main-row__column">
-              <Link to="/step-three">
-                <PrimaryButton text="Recommended activity" />
-              </Link>
+            <div className="step-two-main-row__column">             
               <Link to={`/activity/${filteredByDuration._id}`}>
                 <PrimaryButton text="Random activity" />
+              </Link>
+              <Link to="/step-three">
+                <PrimaryButton text="Recommended activity" />
               </Link>
             </div>
           </div>

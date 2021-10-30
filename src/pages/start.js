@@ -4,7 +4,7 @@ import StartMain from "../components/start-main";
 function Start() {
     return (
       <div className="App">
-        <HeaderStart/>
+        {/* <HeaderStart/> */}
         <StartMain/>
       </div>
     );

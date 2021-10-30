@@ -2,6 +2,7 @@ import "../Activity.css";
 import Countdown, { zeroPad } from "react-countdown";
 import activityPic from "../assets/coffee-cup.png";
 import marker from "../assets/plus_1.png";
+import arrow from "../assets/Arrow.png";
 import background from "../assets/Photo5.png";
 import { useRef, useState } from "react";
 import { useParams, Link } from "react-router-dom";
@@ -79,8 +80,14 @@ export default function Activity({ activity }) {
               </div>
             </div>
           </div>
-          <div className="bg">
+          {/* <div className="bg">
             <img style={{}}src={background}></img>
+          </div> */}
+          <div>
+          <button className="back">
+            <img src={arrow} style={{ width: "27px", height: "18px" }} />
+            Back to last step
+          </button>
           </div>
         </>
       ))}
