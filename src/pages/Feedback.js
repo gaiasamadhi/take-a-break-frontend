@@ -56,13 +56,15 @@ export default function Feedback() {
   };
   console.log(value);
   return (
+    <>
+    <div className="take-break">
+    <h4>PEMM</h4>
+    <Link to="/step-one">
+      <button className="start-break">Take a break</button>
+    </Link>
+  </div>
     <div className="feedbackPage">
-      <div className="take-break">
-        <h4>PEMM</h4>
-        <Link to="/step-one">
-          <button className="start-break">Take a break</button>
-        </Link>
-      </div>
+    
       <h1>How much did this activity help you?</h1>
       <h4>This will help us make better recommendations in the future.</h4>
       <div className="feedback">
@@ -101,5 +103,6 @@ export default function Feedback() {
         </Link>
       </div>
     </div>
+    </>
   );
 }

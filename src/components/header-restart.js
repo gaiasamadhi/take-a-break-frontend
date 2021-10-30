@@ -7,7 +7,7 @@ function HeaderRestart() {
         <div className='header-restart-wrapper'>
             <nav className='header-restart-row'>
                 <li className='header-restart-row__team'>PEMM</li>
-                <Link to='/'><button className='header-restart-row__button'>Restart break</button></Link>
+                {/* <Link to='/'><button className='header-restart-row__button'>Restart break</button></Link> */}
             </nav>    
         </div>
     )

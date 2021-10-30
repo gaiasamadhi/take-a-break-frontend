@@ -1,23 +1,26 @@
 .symptoms-main-wrapper {
     width: 100%;
     background: #F1EEF8;
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* justify-content: center; */
-    /* align-items: center; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../assets/Saly-saly.png");
+    background-repeat: no-repeat;
+    background-position: right bottom;
 }
 
 .symptoms-main-row {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 74px;
+    margin: 10px;
     
 }
 
 .symptoms-main-wrapper__image {
     margin-top: 80px;
-    width: 61.66%;
+    width: 100%;
 }
 
 .symptoms-main-row__content {
@@ -81,7 +84,7 @@
 }
 
 .symptoms-main-row-custom {
-    z-index: 99;
+    /* z-index: 99; */
     padding-top: 15px;
     display: flex;
     justify-content: space-between;
