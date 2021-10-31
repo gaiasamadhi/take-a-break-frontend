@@ -9,18 +9,21 @@ import { useParams, Link } from "react-router-dom";
 
 export default function Activity({ activity }) {
   const timerRef = useRef();
-  const handleStart = () => {timerRef.current.start(); setAutoplay("?autoplay=1")};
+  const handleStart = () => {
+    timerRef.current.start();
+    setAutoplay("?autoplay=1");
+  };
   const handlePause = () => timerRef.current.pause();
   const renderer = ({ minutes, seconds }) => (
     <span>
       {zeroPad(minutes)}:{zeroPad(seconds)}
     </span>
   );
-  console.log(timerRef)
+  console.log(timerRef);
   const activityID = useParams();
   const filteredActivity = activity.filter((act) => act._id === activityID.id);
   console.log(filteredActivity);
-  const [autoplay, setAutoplay] = useState("")
+  const [autoplay, setAutoplay] = useState("");
   return (
     <div className="activityPage">
       <div className="restart-break">
@@ -33,7 +36,11 @@ export default function Activity({ activity }) {
             <iframe
               width="585"
               height="330"
-              src={"https://www.youtube.com/embed/" + act.source.slice(32) + autoplay}
+              src={
+                "https://www.youtube.com/embed/" +
+                act.source.slice(32) +
+                autoplay
+              }
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -53,10 +60,8 @@ export default function Activity({ activity }) {
               <button className="start-button" onClick={handleStart}>
                 Start timer
               </button>
-              <Link to="/feedback">
-              <button className="end-button">
-                End activity early
-              </button>
+              <Link to="/finish">
+                <button className="end-button">End activity</button>
               </Link>
             </div>
           </div>
@@ -64,7 +69,6 @@ export default function Activity({ activity }) {
             <div className="breakDescriptionContainer">
               <h2>{act.name}</h2>
               <div className="activityDescription">
-                {/* <img src={activityPic}></img> */}
                 <p>{act.description}</p>
               </div>
             </div>
@@ -73,21 +77,23 @@ export default function Activity({ activity }) {
               <div className="benefitDescription">
                 {act.benefits.map((b) => (
                   <div className="benefitContainer">
-                    <img src={marker} style={{width: "25px", height: "25px"}}></img>
+                    <img
+                      src={marker}
+                      style={{ width: "25px", height: "25px" }}
+                    ></img>
                     <p>{b.name}</p>
                   </div>
                 ))}
               </div>
             </div>
           </div>
-          {/* <div className="bg">
-            <img style={{}}src={background}></img>
-          </div> */}
           <div>
-          <button className="back">
-            <img src={arrow} style={{ width: "27px", height: "18px" }} />
-            Back to last step
-          </button>
+            <Link to="/step-three">
+              <button className="back">
+                <img src={arrow} style={{ width: "27px", height: "18px" }} />
+                Back to last step
+              </button>
+            </Link>
           </div>
         </>
       ))}

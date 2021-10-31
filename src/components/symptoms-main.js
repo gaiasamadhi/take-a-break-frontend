@@ -54,7 +54,7 @@ function SymptomsMain({ activity }) {
             <div className="symptoms-main-row__content">
               Select{" "}
               <span className="symptoms-main-row__content__underline">one</span>{" "}
-              symptom you are currently experiencing:
+               goal you would like to work towards for this break:
             </div>
           </div>
           <div className="big-checkbox">
@@ -90,7 +90,7 @@ function SymptomsMain({ activity }) {
                   : "616d66855fbae6e46f05c7aa"
               }`}
             > <div>
-              <PrimaryButton text="Confirm goals" />
+              <PrimaryButton text="Confirm goal" />
               </div>
             </Link>
           </div>

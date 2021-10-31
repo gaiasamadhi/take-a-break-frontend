@@ -95,7 +95,7 @@ export default function Feedback() {
         </form>
       </div>
       <div className="go-back-btn">
-        <Link to="/step-two/">
+        <Link to="/finish/">
           <button className="back">
             <img src={arrow} style={{ width: "27px", height: "18px" }} />
             Back to last step
