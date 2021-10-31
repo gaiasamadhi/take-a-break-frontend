@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap");
 
-.activityPage, .feedbackPage2 {
+.activityPage {
   display: flex;
   flex-direction: column;
   background-image: url("./assets/Photo5.png");
@@ -8,6 +8,11 @@
   background-size: 30%;
   background-position-x: right 0px;
   background-position-y: bottom ;
+}
+
+.feedbackPage2, .finishedActivity {
+  display: flex;
+  flex-direction: column;
 }
 .feedbackPage {
   display: flex;
@@ -45,6 +50,8 @@
   border: none;
   color: white;
   margin: 5px;
+  font-family: inherit;
+  font-size: large;
 }
 .restart-button:hover {
   cursor: pointer;
@@ -127,6 +134,7 @@ iframe {
 }
 .breakDescriptionContainer h2 {
   text-align: center;
+  margin-bottom: 5px;
 }
 .activityDescription {
   display: flex;
@@ -144,6 +152,8 @@ iframe {
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
+  margin-left: 10px;
+  margin-bottom: 15px;
 }
 .benefitDescription {
   display: flex;
@@ -171,11 +181,13 @@ iframe {
 .start-button {
   width: 230px;
   height: 50px;
-  border-radius: 20px;
+  border-radius: 15px;
   border: none;
   background: #786598;
   color: white;
   margin: 5px;
+  font-family: inherit;
+  font-size: larger;
 }
 .start-button:hover {
   cursor: pointer;
@@ -184,11 +196,13 @@ iframe {
 .end-button {
   width: 230px;
   height: 50px;
-  border-radius: 20px;
+  border-radius: 15px;
   border: none;
   background: #8d3f3f;
   color: white;
   margin: 5px;
+  font-family: inherit;
+  font-size: larger;
 }
 .end-button:hover {
   cursor: pointer;
@@ -288,12 +302,21 @@ input[type="range"]::-webkit-slider-thumb::before {
     /* border-color: #57417c; */
 }
 .comment {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-self: center;
     width: 500px;
 }
 
 .comment h4 {
     text-align: left;
+}
+
+.comment form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .feedback-button {

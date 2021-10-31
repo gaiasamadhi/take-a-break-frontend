@@ -15,12 +15,12 @@ function StepThreeMain({activity}) {
                 <img className='step-three-main-row__image' src={progressBar} alt='Progress bar'/> 
             </div> 
             <div className='step-three-main-row'>
-                <div className='step-three-main-row__content'>Do you want a break recommendation based on your <span className='step-three-main-row__content__underline'>preferences</span> or <span className='step-three-main-row__content__underline'>current symptoms</span> you might be experiencing?</div>
+                <div className='step-three-main-row__content'><p style={{textAlign:"center"}}>Do you want a break recommendation based on a <u>goal</u> or your <u>preferences</u>?</p></div>
             </div>
             <div className='step-three-main-row'>
                 <div className='step-three-main-row__column'>
+                    <Link to='/step-four/symptoms'><PrimaryButton text='Based on goal'/></Link>
                     <Link to='/step-four/preferences'><PrimaryButton text='Based on preferences'/></Link>
-                    <Link to='/step-four/symptoms'><PrimaryButton text='Based on goals'/></Link>
                 </div>
             </div>
             <div className='step-three-main-row-custom'>

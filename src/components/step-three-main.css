@@ -19,11 +19,13 @@
 }
 
 .step-three-main-row__content {
-    margin-top: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
     margin-bottom: 85px;
     font-size: 36px;
-    line-height: 54px;
-    width: 70.18%;
+    width: 60%;
 }
 
 .step-three-main-row__content__underline {
