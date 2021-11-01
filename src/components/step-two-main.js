@@ -54,7 +54,7 @@ function StepTwoMain({ activity, shortBreak, mediumBreak, longBreak }) {
             </div>
           </div>
           <div className="step-two-main-row">
-            <div className="step-two-main-row__column">             
+            <div className="step-two-main-row__column">
               <Link to={`/activity/${filteredByDuration._id}`}>
                 <PrimaryButton text="Random activity" />
               </Link>
@@ -63,15 +63,15 @@ function StepTwoMain({ activity, shortBreak, mediumBreak, longBreak }) {
               </Link>
             </div>
           </div>
-          <div>
-            <Link to="/step-one">
-              <SecondaryButton text="Back to previous question" />
-            </Link>
-          </div>
         </>
       ) : (
         <h1>Loading</h1>
       )}
+      <div className="prev">
+        <Link to="/step-one">
+          <SecondaryButton text="Back to previous question" />
+        </Link>
+      </div>
     </div>
   );
 }

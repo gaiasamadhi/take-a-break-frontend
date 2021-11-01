@@ -27,3 +27,9 @@
     margin: 12px 40px 12px 0px;
     border: none;
 }
+
+@media(max-width: 815px) {
+    .header-restart-wrapper {
+        display: none;
+    }   
+}
