@@ -54,4 +54,12 @@
     font-size: 64px;
     margin: 40px 0px;
 }
+.main-row h1 {
+    text-align: center;
+}
 
+@media(max-width: 900px) {
+    .main-wrapper {
+        background-size: 60%;
+    }
+}
