@@ -87,7 +87,7 @@ export default function Feedback() {
             value={value.comment}
             rows="6"
             cols="40"
-            placeholder="What did you like?&#10;What did you not like about the process?&#10;How accurate were your recommendations?" //&#10; -new line html entity
+            placeholder="What did you like?&#10;What could be better?&#10;How accurate were your recommendations?" //&#10; -new line html entity
           />
           { click? <Redirect to="/submitted"/> :          
             <button className="feedback-button" onClick={submitFeedback}>Submit feedback</button>

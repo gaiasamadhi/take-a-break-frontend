@@ -75,7 +75,7 @@ function Routes() {
                 <Activity activity={activity} />
             </Route>
             <Route path="/finish">
-                <Finish />
+                <Finish activity={activity}/>
             </Route>
             <Route path="/feedback">
                 <Feedback />
