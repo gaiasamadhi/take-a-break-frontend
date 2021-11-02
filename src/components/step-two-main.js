@@ -8,15 +8,11 @@ import "./step-two-main.css";
 // import { SyncLoader } from 'react-spinners/SyncLoader'
 function StepTwoMain({ activity, shortBreak, mediumBreak, longBreak }) {
   const [randomActivity, setRandomActivity] = useState([]);
-  // const [color, setColor] = useState("#58417C")
-  // const [loading, setLoading] = useState(false)
-  // const randomActivity = activity[Math.floor(Math.random() * activity.length)];
-  // console.log(randomActivity._id);
+
   console.log(shortBreak);
   console.log(mediumBreak);
   console.log(longBreak);
 
-  // console.log(randomActivity)
   useEffect(() => {
     if (shortBreak.length) {
       setRandomActivity(shortBreak);

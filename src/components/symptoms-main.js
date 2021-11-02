@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import "./symptoms-main.css";
-
+import HeaderRestart from "./header-restart";
 const goalAPI = "https://recharge-backend1.herokuapp.com/symptoms";
 
 function SymptomsMain({ activity }) {
@@ -40,6 +40,7 @@ function SymptomsMain({ activity }) {
   //   console.log(filteredbyGoal)
   return (
     <>
+    <HeaderRestart />
     <div className="symptoms-main-wrapper">
       {activity && goal ? (
         <>

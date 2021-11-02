@@ -8,8 +8,7 @@
     height: 91vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    /* justify-content: flex-end; */
+    justify-content: space-between;
 }
 .step-two-main-row {
     display: flex;

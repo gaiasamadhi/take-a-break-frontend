@@ -25,9 +25,6 @@ function StepThreeMain({activity}) {
             </div>
             <div className='step-three-main-row-custom'>
                 <Link to='/step-two'><SecondaryButton text='Back to previous question'/></Link>
-                {/* <div className='step-three-main-row-custom-wrapper'>
-                    <img className='step-three-main-row-custom-wrapper__image'src={walk} alt='Person walking'/>
-                </div>     */}
             </div>
         </div>        
     )

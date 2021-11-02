@@ -13,13 +13,18 @@ export default function Activity({ activity }) {
     timerRef.current.start();
     setAutoplay("?autoplay=1");
   };
+  const handleRestart = (e) => {
+    // console.log(e)
+    timerRef.current.stop()
+    handleStart()
+  }
   const handlePause = () => timerRef.current.pause();
   const renderer = ({ minutes, seconds }) => (
     <span>
       {zeroPad(minutes)}:{zeroPad(seconds)}
     </span>
   );
-  console.log(timerRef);
+  console.log(timerRef.current);
   const activityID = useParams();
   const filteredActivity = activity.filter((act) => act._id === activityID.id);
   console.log(filteredActivity);
@@ -28,7 +33,7 @@ export default function Activity({ activity }) {
     <div className="activityPage">
       <div className="restart-break">
         <h4>PEMM</h4>
-        <button className="restart-button">Restart Break</button>
+        <button onClick={handleRestart} className="restart-button">Restart Break</button>
       </div>
       {filteredActivity.map((act) => (
         <>
