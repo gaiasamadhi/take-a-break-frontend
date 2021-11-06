@@ -60,3 +60,9 @@
         text-align: center;
     }
 }
+@media(max-width: 500px){
+    .step-two-main-row__content{
+        font-size: 16px;
+        width: 100%;
+    }
+}
