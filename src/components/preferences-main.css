@@ -1,12 +1,22 @@
+.preference-page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.preference-page h1 {
+    text-align: center;
+}
 .preferences-main-wrapper {
     width: 100%;
+    height: 70vh;
     background: #F1EEF8;
     background-image: url("../assets/Saly-hands.png");
     background-repeat: no-repeat;
     background-position: left bottom;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 

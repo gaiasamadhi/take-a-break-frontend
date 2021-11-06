@@ -6,8 +6,7 @@
   background-image: url("./assets/Photo5.png");
   background-repeat: no-repeat;
   background-size: 30%;
-  background-position-x: right 0px;
-  background-position-y: bottom ;
+  background-position: right bottom;
 }
 
 .feedbackPage2, .finishedActivity {
@@ -223,6 +222,7 @@ iframe {
 }
 .finishButtons h2 {
     margin-bottom: 100px;
+    text-align: center;
 }
 .feedback {
   position: relative;
@@ -380,4 +380,19 @@ input[type="range"]::-webkit-slider-thumb::before {
 .benefitContainer {
   display: flex;
   align-items: center;
+}
+@media(max-width: 990px) {
+  .activityPage {
+    height: 100vh;
+    justify-content: space-between;
+  }
+}
+@media(max-width: 650px){
+  .player, .break {
+    flex-direction: column;
+    margin: 0;
+  }
+  .timer, iframe, .breakDescriptionContainer {
+    width: 91%;
+  }
 }
