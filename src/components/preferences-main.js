@@ -1,7 +1,7 @@
 import progressBar from "../assets/Progress-bar-preferences.svg";
-import fingers from "../assets/Saly-hands.png";
 import PrimaryButton from "./primary-button";
-import SecondaryButton from "./secondary-button";
+import "../Activity.css";
+import arrow from "../assets/Arrow.png";
 import { Link } from "react-router-dom";
 import HeaderRestart from "./header-restart";
 
@@ -10,7 +10,7 @@ import ToggleSwitch from "./toggle-switch";
 
 function PreferencesMain() {
   return (
-    <>
+    <div className="preference-page">
       <HeaderRestart />
       <div className="preferences-main-wrapper">
         <div className="preferences-main-row">
@@ -47,9 +47,12 @@ function PreferencesMain() {
         <PrimaryButton text="Confirm preferences" />
       </div>
       <Link to="/step-three">
-        <SecondaryButton text="Back to previous question" />
+      <button className="back">
+          <img src={arrow} style={{ width: "27px", height: "18px" }} />
+          Back to last step
+        </button>
       </Link>
-    </>
+    </div>
   );
 }
 
