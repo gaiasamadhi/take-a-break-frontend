@@ -10,7 +10,7 @@ export default function Finish({ activity }) {
         <h4>PEMM</h4>
       </div>
       <div className="finish">
-        <img src={rocket}></img>
+        {/* <img src={rocket}></img> */}
         <div className="finishButtons">
           <h2>Congrats on finishing your activity!</h2>
           <Link to="/feedback">
@@ -28,7 +28,7 @@ export default function Finish({ activity }) {
             Repeat this activity
           </button>
         </div>
-        <img src={globe} style={{ height: "50%" }}></img>
+        {/* <img src={globe} style={{ height: "50%" }}></img> */}
       </div>
     </div>
   );

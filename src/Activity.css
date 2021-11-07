@@ -16,13 +16,14 @@
 .feedbackPage {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   height: 93vh;
   background-image:url('/src/assets/Photo7.png');
   background-repeat:no-repeat;
   background-position-x:right 0px;
   background-position-y:bottom -25px;
+  background-size: 25%;
 }
 .feedbackPage2 {
   height: 100vh;
@@ -72,8 +73,12 @@
   align-items: center;
   background: white;
 }
-.feedbackPage h1s {
+.feedbackPage h1 {
   margin: 0px;
+  text-align: center;
+}
+.feedbackPage h4 {
+  text-align: center;
 }
 
 .restart-break h4, .take-break h4 {
@@ -212,13 +217,19 @@ iframe {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  background-image: url("./assets/Photo6.png"), url("./assets/Saly-44.png");
+  background-position:left, right;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 35%, 35%;
+  
 }
 .finishButtons {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-right: 100px;
+  height: 90vh;
+  /* margin-right: 100px; */
 }
 .finishButtons h2 {
     margin-bottom: 100px;
@@ -308,10 +319,11 @@ input[type="range"]::-webkit-slider-thumb::before {
     align-self: center;
     width: 500px;
 }
-
 .comment h4 {
-    text-align: left;
+  text-align: center;
+
 }
+
 
 .comment form {
   display: flex;
@@ -329,10 +341,13 @@ input[type="range"]::-webkit-slider-thumb::before {
     background: #786598;
     color: white;
     margin: 50px 5px 5px 5px;
+    cursor: pointer;
 }
 .feedback-button:hover {
-    cursor: pointer;
     background: #3E2D5A;
+}
+.feedback-button:active {
+  background: #3E2D5A;
 }
 .back {
   font-family: "Reem Kufi", sans-serif;
@@ -394,5 +409,23 @@ input[type="range"]::-webkit-slider-thumb::before {
   }
   .timer, iframe, .breakDescriptionContainer {
     width: 91%;
+  }
+}
+
+@media(max-width: 700px) {
+  .finish {
+    background-image: none;
+  }
+}
+
+@media(max-width: 560px) {
+  .feedbackPage textarea, .comment {
+    width: 70vw;
+}
+}
+
+@media(max-width: 385px) {
+  .feedbackPage {
+    background-image: none;
   }
 }
