@@ -1,16 +1,14 @@
 import "../Activity.css";
-import rocket from "../assets/Photo6.png";
-import globe from "../assets/Saly-44.png";
 import { Link, useHistory } from "react-router-dom";
-export default function Finish({ activity }) {
+export default function Finish() {
   const history = useHistory();
+  console.log(history)
   return (
     <div className="finishedActivity">
       <div className="restart-break">
         <h4>PEMM</h4>
       </div>
       <div className="finish">
-        {/* <img src={rocket}></img> */}
         <div className="finishButtons">
           <h2>Congrats on finishing your activity!</h2>
           <Link to="/feedback">
@@ -28,7 +26,6 @@ export default function Finish({ activity }) {
             Repeat this activity
           </button>
         </div>
-        {/* <img src={globe} style={{ height: "50%" }}></img> */}
       </div>
     </div>
   );

@@ -1,17 +1,13 @@
 import progressBar from "../assets/Progress-bar-step-two.svg";
-import saly from "../assets/Saly-greeting.png";
 import PrimaryButton from "./primary-button";
-import SecondaryButton from "./secondary-button";
-import { Link } from "react-router-dom";
+import arrow from "../assets/Arrow.png";
+import { Link, useHistory } from "react-router-dom";
 import { useState, useEffect } from "react";
 import "./step-two-main.css";
-// import { SyncLoader } from 'react-spinners/SyncLoader'
-function StepTwoMain({ activity, shortBreak, mediumBreak, longBreak }) {
-  const [randomActivity, setRandomActivity] = useState([]);
 
-  console.log(shortBreak);
-  console.log(mediumBreak);
-  console.log(longBreak);
+function StepTwoMain({ shortBreak, mediumBreak, longBreak }) {
+  const [randomActivity, setRandomActivity] = useState([]);
+  const history = useHistory()
 
   useEffect(() => {
     if (shortBreak.length) {
@@ -24,7 +20,7 @@ function StepTwoMain({ activity, shortBreak, mediumBreak, longBreak }) {
   }, []);
   const filteredByDuration =
     randomActivity[Math.floor(Math.random() * randomActivity.length)];
-  console.log(filteredByDuration);
+  console.log(randomActivity);
   return (
     <div className="step-two-main-wrapper">
       {randomActivity.length ? (
@@ -54,7 +50,7 @@ function StepTwoMain({ activity, shortBreak, mediumBreak, longBreak }) {
               <Link to={`/activity/${filteredByDuration._id}`}>
                 <PrimaryButton text="Random activity" />
               </Link>
-              <Link to="/step-three">
+              <Link onClick={()=>history.push("/step-three")} to="/step-three">
                 <PrimaryButton text="Recommended activity" />
               </Link>
             </div>
@@ -65,7 +61,10 @@ function StepTwoMain({ activity, shortBreak, mediumBreak, longBreak }) {
       )}
       <div className="prev">
         <Link to="/step-one">
-          <SecondaryButton text="Back to previous question" />
+          <button className="back">
+            <img src={arrow} style={{ width: "27px", height: "18px" }} />
+            Back to last step
+          </button>
         </Link>
       </div>
     </div>

@@ -9,11 +9,28 @@ import "./symptoms-main.css";
 import HeaderRestart from "./header-restart";
 const goalAPI = "https://recharge-backend1.herokuapp.com/symptoms";
 
-function SymptomsMain({ activity }) {
+function SymptomsMain({ activity, shortBreak, mediumBreak, longBreak }) {
+
   const [goal, setGoal] = useState([]);
   const [checked, setChecked] = useState([]);
-  //   console.log(goal);
-  useEffect(() => {
+  const [filteredbyGoal, setFilteredbyGoal] = useState([])
+  
+
+  console.log(shortBreak)
+  // console.log(mediumBreak)
+  // console.log(longBreak)
+  const filter = () => {
+    if(shortBreak.length){
+        setFilteredbyGoal(shortBreak.filter((a)=> a.symptoms[0].name.includes(checked[0]) || a.symptoms[0].name.includes(checked[1])))
+     } else if(mediumBreak.length){
+       setFilteredbyGoal(mediumBreak.filter((a)=> a.symptoms[0].name.includes(checked[0]) || a.symptoms[0].name.includes(checked[1])))
+     } else {
+       setFilteredbyGoal(longBreak.filter((a)=> a.symptoms[0].name.includes(checked[0]) || a.symptoms[0].name.includes(checked[1])))
+     }
+    }
+  
+
+  useEffect(async() => {
     axios.get(goalAPI).then(
       (response) => {
         setGoal(response.data);
@@ -22,22 +39,18 @@ function SymptomsMain({ activity }) {
         console.log(error);
       }
     );
+
   }, []);
-  //   console.log(activity)
-  const filteredbyGoal = activity.filter(
-    (a) =>
-      a.symptoms[0].name.includes(checked[0]) ||
-      a.symptoms[0].name.includes(checked[1])
-  );
-  const [randomGoal, setRandomGoal] = useState([]);
-  const handleCheck = (e) => {
-    setChecked([...checked, e.target.value]);
-    setRandomGoal(filteredbyGoal);
+
+  const handleCheck =async (e) => {
+     setChecked([...checked, e.target.value])
+    // setRandomGoal(filteredbyGoal);
+    // filter()
   };
-  console.log(filteredbyGoal);
-  console.log(randomGoal);
-  //   console.log(activity[0].symptoms[0].name.includes('Feel more energetic'))
-  //   console.log(filteredbyGoal)
+  console.log(checked)
+ 
+  
+  console.log(filteredbyGoal)
   return (
     <div className="goal-page">
       <HeaderRestart />
@@ -83,8 +96,9 @@ function SymptomsMain({ activity }) {
                 )}
               </div>
             </div>
-            <div>
-              <Link
+        {/* UNCOMMENT LINK, REDIRECT TO ACTIVITY AFTER FIXING SETFILTEREDBYGOAL */}
+            <div onClick={filter}>
+              {/* <Link 
                 to={`/activity/${
                   filteredbyGoal.length
                     ? filteredbyGoal[
@@ -92,12 +106,12 @@ function SymptomsMain({ activity }) {
                       ]._id
                     : "616d66855fbae6e46f05c7aa"
                 }`}
-              >
+              > */}
                 {" "}
                 <div>
-                  <PrimaryButton text="Confirm goal" />
+                  <PrimaryButton onClick={filter} text="Confirm goal" />
                 </div>
-              </Link>
+              {/* </Link> */}
             </div>
             <div></div>
           </>
