@@ -1,8 +1,7 @@
 import progressBar from "../assets/Progress-bar-step-four.svg";
-import PrimaryButton from "./primary-button";
 import "../Activity.css";
 import arrow from "../assets/Arrow.png";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import "./symptoms-main.css";
@@ -15,18 +14,25 @@ function SymptomsMain({ activity, shortBreak, mediumBreak, longBreak }) {
   const [checked, setChecked] = useState([]);
   const [filteredbyGoal, setFilteredbyGoal] = useState([])
   
-
   console.log(shortBreak)
-  // console.log(mediumBreak)
+  console.log(mediumBreak)
   // console.log(longBreak)
   const filter = () => {
     if(shortBreak.length){
         setFilteredbyGoal(shortBreak.filter((a)=> a.symptoms[0].name.includes(checked[0]) || a.symptoms[0].name.includes(checked[1])))
-     } else if(mediumBreak.length){
+      return  <Link to={`/activity/${
+          filteredbyGoal.length
+            ? filteredbyGoal[
+                Math.floor(Math.random() * filteredbyGoal.length)
+              ]._id
+            : "616d66855fbae6e46f05c7aa"
+        }`}/>
+      } else if(mediumBreak.length){
        setFilteredbyGoal(mediumBreak.filter((a)=> a.symptoms[0].name.includes(checked[0]) || a.symptoms[0].name.includes(checked[1])))
      } else {
        setFilteredbyGoal(longBreak.filter((a)=> a.symptoms[0].name.includes(checked[0]) || a.symptoms[0].name.includes(checked[1])))
      }
+     
     }
   
 
@@ -42,14 +48,12 @@ function SymptomsMain({ activity, shortBreak, mediumBreak, longBreak }) {
 
   }, []);
 
-  const handleCheck =async (e) => {
+  const handleCheck = (e) => {
      setChecked([...checked, e.target.value])
-    // setRandomGoal(filteredbyGoal);
-    // filter()
   };
   console.log(checked)
  
-  
+   
   console.log(filteredbyGoal)
   return (
     <div className="goal-page">
@@ -96,9 +100,11 @@ function SymptomsMain({ activity, shortBreak, mediumBreak, longBreak }) {
                 )}
               </div>
             </div>
-        {/* UNCOMMENT LINK, REDIRECT TO ACTIVITY AFTER FIXING SETFILTEREDBYGOAL */}
-            <div onClick={filter}>
-              {/* <Link 
+            <div>
+          
+                
+                <div>
+                  {filteredbyGoal.length ? <Link 
                 to={`/activity/${
                   filteredbyGoal.length
                     ? filteredbyGoal[
@@ -106,12 +112,11 @@ function SymptomsMain({ activity, shortBreak, mediumBreak, longBreak }) {
                       ]._id
                     : "616d66855fbae6e46f05c7aa"
                 }`}
-              > */}
-                {" "}
-                <div>
-                  <PrimaryButton onClick={filter} text="Confirm goal" />
+              > <button className='primary-button'>Go to activity</button> </Link>:
+                <button onClick={filter} className='primary-button'>Confirm Goal</button>
+              }
                 </div>
-              {/* </Link> */}
+                
             </div>
             <div></div>
           </>
