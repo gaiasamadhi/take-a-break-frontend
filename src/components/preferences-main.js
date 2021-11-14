@@ -12,6 +12,8 @@ function PreferencesMain({shortBreak, mediumBreak, longBreak}) {
   console.log(shortBreak)
   console.log(mediumBreak)
   console.log(longBreak)
+  const preferences1 = ["Physical", "Mindful", "Indoor", "Guided", "Hype Up"]
+  const preferences2 = ["Mental", "Mindless", "Outdoor", "Self led", "Calm down"]
   return (
     <div className="preference-page">
       <HeaderRestart />
@@ -26,11 +28,7 @@ function PreferencesMain({shortBreak, mediumBreak, longBreak}) {
         <h1>Choose a side for each prompt:</h1>
         <div className="preferences-main-row">
           <div className="preferences-main-row__content">
-            <div className="preferences-main-row__content__text">Physical</div>
-            <div className="preferences-main-row__content__text">Mindful</div>
-            <div className="preferences-main-row__content__text">Indoor</div>
-            <div className="preferences-main-row__content__text">Guided</div>
-            <div className="preferences-main-row__content__text">Hype Up</div>
+            {preferences1.map((p)=><div className="preferences-main-row__content__text">{p}</div>)}
           </div>
           <div className="preferences-main-row__content">
             <ToggleSwitch />
@@ -40,11 +38,7 @@ function PreferencesMain({shortBreak, mediumBreak, longBreak}) {
             <ToggleSwitch />
           </div>
           <div className="preferences-main-row__content">
-            <div className="preferences-main-row__content__text">Mental</div>
-            <div className="preferences-main-row__content__text">Mindless</div>
-            <div className="preferences-main-row__content__text">Outdoor</div>
-            <div className="preferences-main-row__content__text">Self led</div>
-            <div className="preferences-main-row__content__text">Calm down</div>
+          {preferences2.map((p)=><div className="preferences-main-row__content__text">{p}</div>)}
           </div>
         </div>
         <PrimaryButton text="Confirm preferences" />

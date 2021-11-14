@@ -7,6 +7,7 @@
   background-repeat: no-repeat;
   background-size: 30%;
   background-position: right bottom;
+  height: 100vh;
 }
 
 .feedbackPage2, .finishedActivity {
@@ -18,7 +19,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 93vh;
+  height: 92vh;
   background-image:url('/src/assets/Photo7.png');
   background-repeat:no-repeat;
   background-position-x:right 0px;
@@ -139,6 +140,7 @@ iframe {
 .breakDescriptionContainer h2 {
   text-align: center;
   margin-bottom: 5px;
+  margin-top: 5px;
 }
 .activityDescription {
   display: flex;
@@ -394,6 +396,14 @@ input[type="range"]::-webkit-slider-thumb::before {
 .benefitContainer {
   display: flex;
   align-items: center;
+}
+.logoSection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.logoSection h4 {
+  font-size: 24px;
 }
 @media(max-width: 990px) {
   .activityPage {

@@ -4,14 +4,21 @@
 }
 .header-restart-row {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    /* justify-content: space-between; */
 }
-
+.logo{
+    margin: 0px 0px 0px 40px;
+    width:36px;
+    height: 36px;
+}
 .header-restart-row__team {
     list-style-type: none;
     font-size: 24px;
     line-height: 36px;
-    margin: 12px 0px 12px 40px; 
+    margin: 12px 0px 12px 16px; 
 }
 
 .header-restart-row__button {

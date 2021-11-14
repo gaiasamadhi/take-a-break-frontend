@@ -1,9 +1,8 @@
 import "../Activity.css";
 import Countdown, { zeroPad } from "react-countdown";
-import activityPic from "../assets/coffee-cup.png";
 import marker from "../assets/plus_1.png";
 import arrow from "../assets/Arrow.png";
-import background from "../assets/Photo5.png";
+import logo from '../assets/logo6.png'
 import { useRef, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 
@@ -32,7 +31,9 @@ export default function Activity({ activity }) {
   return (
     <div className="activityPage">
       <div className="restart-break">
-        <h4>PEMM</h4>
+        <div className="logoSection">
+        <img src={logo} className="logo"/><h4 style={{marginLeft:"16px"}}>Recharge</h4>
+        </div>
         <button onClick={handleRestart} className="restart-button">Restart Break</button>
       </div>
       {filteredActivity.map((act) => (
