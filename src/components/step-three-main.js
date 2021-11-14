@@ -1,13 +1,14 @@
 import progressBar from "../assets/Progress-bar-step-three.svg";
-import walk from "../assets/Photo-four.png";
 import PrimaryButton from "./primary-button";
 import { Link } from "react-router-dom";
 import arrow from "../assets/Arrow.png";
 import "../Activity.css";
 import "./step-three-main.css";
 
-function StepThreeMain({ activity }) {
-  console.log(activity);
+function StepThreeMain({ shortBreak, mediumBreak, longBreak }) {
+  console.log(shortBreak);
+  console.log(mediumBreak);
+  console.log(longBreak);
   return (
     <div className="step-three-main-wrapper">
       <div className="step-three-main-row">

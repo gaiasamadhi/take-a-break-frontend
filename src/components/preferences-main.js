@@ -8,7 +8,10 @@ import HeaderRestart from "./header-restart";
 import "./preferences-main.css";
 import ToggleSwitch from "./toggle-switch";
 
-function PreferencesMain() {
+function PreferencesMain({shortBreak, mediumBreak, longBreak}) {
+  console.log(shortBreak)
+  console.log(mediumBreak)
+  console.log(longBreak)
   return (
     <div className="preference-page">
       <HeaderRestart />
