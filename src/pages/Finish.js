@@ -1,12 +1,17 @@
 import "../Activity.css";
 import { Link, useHistory } from "react-router-dom";
+import logo from "../assets/logo6.png";
+
 export default function Finish() {
   const history = useHistory();
-  console.log(history)
+  console.log(history);
   return (
     <div className="finishedActivity">
       <div className="restart-break">
-        <h4>PEMM</h4>
+        <div className="logoSection">
+          <img src={logo} className="logo" />
+          <h4 style={{ marginLeft: "16px" }}>Recharge</h4>
+        </div>
       </div>
       <div className="finish">
         <div className="finishButtons">
