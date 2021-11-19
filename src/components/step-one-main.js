@@ -1,9 +1,6 @@
 import progressBar from '../assets/Progress-bar.svg';
 import photo from '../assets/Photo-two.png';
 import calendar from '../assets/Saly.png';
-import PrimaryButton from './primary-button';
-import { Link } from 'react-router-dom';
-import { useState } from 'react';
 import './step-one-main.css';
 
 function StepOneMain({handleBreakDuration1, handleBreakDuration2, handleBreakDuration3}) {

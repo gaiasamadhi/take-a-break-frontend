@@ -43,7 +43,14 @@
 .step-two-main-row-image {
     display: flex;
 }
-
+.loader {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 @media(max-width: 900px){
     .step-two-main-wrapper{
         height: 100vh;

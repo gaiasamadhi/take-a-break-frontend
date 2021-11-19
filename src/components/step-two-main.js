@@ -4,10 +4,11 @@ import arrow from "../assets/Arrow.png";
 import { Link, useHistory } from "react-router-dom";
 import { useState, useEffect } from "react";
 import "./step-two-main.css";
+import Loader from "react-loader-spinner";
 
 function StepTwoMain({ shortBreak, mediumBreak, longBreak }) {
   const [randomActivity, setRandomActivity] = useState([]);
-  const history = useHistory()
+  const history = useHistory();
 
   useEffect(() => {
     if (shortBreak.length) {
@@ -50,14 +51,19 @@ function StepTwoMain({ shortBreak, mediumBreak, longBreak }) {
               <Link to={`/activity/${filteredByDuration._id}`}>
                 <PrimaryButton text="Random activity" />
               </Link>
-              <Link onClick={()=>history.push("/step-three")} to="/step-three">
+              <Link
+                onClick={() => history.push("/step-three")}
+                to="/step-three"
+              >
                 <PrimaryButton text="Recommended activity" />
               </Link>
             </div>
           </div>
         </>
       ) : (
-        <h1>Loading</h1>
+        <div className="loader">
+          <Loader type="ThreeDots" color="#58417C" height={100} width={100} />
+        </div>
       )}
       <div className="prev">
         <Link to="/step-one">

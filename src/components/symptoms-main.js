@@ -6,37 +6,58 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import "./symptoms-main.css";
 import HeaderRestart from "./header-restart";
+import Loader from "react-loader-spinner";
+
 const goalAPI = "https://recharge-backend1.herokuapp.com/symptoms";
 
 function SymptomsMain({ activity, shortBreak, mediumBreak, longBreak }) {
-
   const [goal, setGoal] = useState([]);
   const [checked, setChecked] = useState([]);
-  const [filteredbyGoal, setFilteredbyGoal] = useState([])
-  
-  console.log(shortBreak)
-  console.log(mediumBreak)
+  const [filteredbyGoal, setFilteredbyGoal] = useState([]);
+
+  console.log(shortBreak);
+  console.log(mediumBreak);
   // console.log(longBreak)
   const filter = () => {
-    if(shortBreak.length){
-        setFilteredbyGoal(shortBreak.filter((a)=> a.symptoms[0].name.includes(checked[0]) || a.symptoms[0].name.includes(checked[1])))
-      return  <Link to={`/activity/${
-          filteredbyGoal.length
-            ? filteredbyGoal[
-                Math.floor(Math.random() * filteredbyGoal.length)
-              ]._id
-            : "616d66855fbae6e46f05c7aa"
-        }`}/>
-      } else if(mediumBreak.length){
-       setFilteredbyGoal(mediumBreak.filter((a)=> a.symptoms[0].name.includes(checked[0]) || a.symptoms[0].name.includes(checked[1])))
-     } else {
-       setFilteredbyGoal(longBreak.filter((a)=> a.symptoms[0].name.includes(checked[0]) || a.symptoms[0].name.includes(checked[1])))
-     }
-     
+    if (shortBreak.length) {
+      setFilteredbyGoal(
+        shortBreak.filter(
+          (a) =>
+            a.symptoms[0].name.includes(checked[0]) ||
+            a.symptoms[0].name.includes(checked[1])
+        )
+      );
+      return (
+        <Link
+          to={`/activity/${
+            filteredbyGoal.length
+              ? filteredbyGoal[
+                  Math.floor(Math.random() * filteredbyGoal.length)
+                ]._id
+              : "616d66855fbae6e46f05c7aa"
+          }`}
+        />
+      );
+    } else if (mediumBreak.length) {
+      setFilteredbyGoal(
+        mediumBreak.filter(
+          (a) =>
+            a.symptoms[0].name.includes(checked[0]) ||
+            a.symptoms[0].name.includes(checked[1])
+        )
+      );
+    } else {
+      setFilteredbyGoal(
+        longBreak.filter(
+          (a) =>
+            a.symptoms[0].name.includes(checked[0]) ||
+            a.symptoms[0].name.includes(checked[1])
+        )
+      );
     }
-  
+  };
 
-  useEffect(async() => {
+  useEffect(async () => {
     axios.get(goalAPI).then(
       (response) => {
         setGoal(response.data);
@@ -45,16 +66,14 @@ function SymptomsMain({ activity, shortBreak, mediumBreak, longBreak }) {
         console.log(error);
       }
     );
-
   }, []);
 
   const handleCheck = (e) => {
-     setChecked([...checked, e.target.value])
+    setChecked([...checked, e.target.value]);
   };
-  console.log(checked)
- 
-   
-  console.log(filteredbyGoal)
+  console.log(checked);
+
+  console.log(filteredbyGoal);
   return (
     <div className="goal-page">
       <HeaderRestart />
@@ -96,41 +115,54 @@ function SymptomsMain({ activity, shortBreak, mediumBreak, longBreak }) {
                     </div>
                   ))
                 ) : (
-                  <h1>Loading</h1>
+                    <Loader
+                      type="ThreeDots"
+                      color="#58417C"
+                      height={100}
+                      width={100}
+                    />
                 )}
               </div>
             </div>
             <div>
-          
-                
-                <div>
-                  {filteredbyGoal.length ? <Link 
-                to={`/activity/${
-                  filteredbyGoal.length
-                    ? filteredbyGoal[
-                        Math.floor(Math.random() * filteredbyGoal.length)
-                      ]._id
-                    : "616d66855fbae6e46f05c7aa"
-                }`}
-              > <button className='primary-button'>Go to activity</button> </Link>:
-                <button onClick={filter} className='primary-button'>Confirm Goal</button>
-              }
-                </div>
-                
+              <div>
+                {filteredbyGoal.length ? (
+                  <Link
+                    to={`/activity/${
+                      filteredbyGoal.length
+                        ? filteredbyGoal[
+                            Math.floor(Math.random() * filteredbyGoal.length)
+                          ]._id
+                        : "616d66855fbae6e46f05c7aa"
+                    }`}
+                  >
+                    {" "}
+                    <button className="primary-button">
+                      Go to activity
+                    </button>{" "}
+                  </Link>
+                ) : (
+                  <button onClick={filter} className="primary-button">
+                    Confirm Goal
+                  </button>
+                )}
+              </div>
             </div>
             <div></div>
           </>
         ) : (
-          <h1>Loading</h1>
+          <div className="loader">
+            <Loader type="ThreeDots" color="#58417C" height={100} width={100} />
+          </div>
         )}
       </div>
       <div>
-      <Link to="/step-three">
-        <button className="back">
-          <img src={arrow} style={{ width: "27px", height: "18px" }} />
-          Back to last step
-        </button>
-      </Link>
+        <Link to="/step-three">
+          <button className="back">
+            <img src={arrow} style={{ width: "27px", height: "18px" }} />
+            Back to last step
+          </button>
+        </Link>
       </div>
     </div>
   );
