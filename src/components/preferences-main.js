@@ -96,7 +96,7 @@ function PreferencesMain({ shortBreak, mediumBreak, longBreak }) {
                     : "616d66855fbae6e46f05c7aa"
                 }`}
               > <button className='primary-button'>Go to activity</button> </Link>:
-                <button onClick={confirmPreference} className='primary-button'>Confirm preferences</button>
+               <div><button onClick={confirmPreference} className='primary-button'>Confirm preferences</button></div>
               }
       </div>
       <Link to="/step-three">
