@@ -4,14 +4,17 @@ import "../Activity.css";
 import arrow from "../assets/Arrow.png";
 import { Link } from "react-router-dom";
 import HeaderRestart from "./header-restart";
-
 import "./preferences-main.css";
 import ToggleSwitch from "./toggle-switch";
+import { useState } from 'react'; 
 
 function PreferencesMain({ shortBreak, mediumBreak, longBreak }) {
   console.log(shortBreak);
   console.log(mediumBreak);
   console.log(longBreak);
+  const [filteredbyPreference, setFilteredbyPreference] = useState([])
+  const [checkedPreference, setCheckedPreference] = useState([])
+
   const preferences1 = ["Physical", "Mindful", "Indoor", "Guided", "Hype Up"];
   const preferences2 = [
     "Mental",
@@ -29,11 +32,29 @@ function PreferencesMain({ shortBreak, mediumBreak, longBreak }) {
   ];
   const handleCheck = (e) => {
     if (e.target.checked) {
-      console.log(e.target.name);
+      setCheckedPreference(e.target.name);
     } else{
-      console.log(e.target.value)
-    }
+      setCheckedPreference(e.target.value)
+    }        
   };
+  const confirmPreference = () => {
+    if(shortBreak.length){
+      setFilteredbyPreference(shortBreak.filter((a)=> a.preference[0].includes(checkedPreference[0]) || a.preference[0].includes(checkedPreference[1])))
+      return  <Link to={`/activity/${
+          filteredbyPreference.length
+            ? filteredbyPreference[
+                Math.floor(Math.random() * filteredbyPreference.length)
+              ]._id
+            : "616d66855fbae6e46f05c7aa"
+        }`}/>
+      } else if(mediumBreak.length){
+        setFilteredbyPreference(mediumBreak.filter((a)=> a.preference[0].includes(checkedPreference[0]) || a.preference[0].includes(checkedPreference[1])))
+     } else {
+      setFilteredbyPreference(longBreak.filter((a)=> a.preference[0].includes(checkedPreference[0]) || a.preference[0].includes(checkedPreference[1])))
+     }
+  }
+  console.log(filteredbyPreference)
+  console.log(checkedPreference)
   return (
     <div className="preference-page">
       <HeaderRestart />
@@ -66,7 +87,17 @@ function PreferencesMain({ shortBreak, mediumBreak, longBreak }) {
             ))}
           </div>
         </div>
-        <PrimaryButton text="Confirm preferences" />
+        {filteredbyPreference.length ? <Link 
+                to={`/activity/${
+                  filteredbyPreference.length
+                    ? filteredbyPreference[
+                        Math.floor(Math.random() * filteredbyPreference.length)
+                      ]._id
+                    : "616d66855fbae6e46f05c7aa"
+                }`}
+              > <button className='primary-button'>Go to activity</button> </Link>:
+                <button onClick={confirmPreference} className='primary-button'>Confirm preferences</button>
+              }
       </div>
       <Link to="/step-three">
         <button className="back">
