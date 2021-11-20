@@ -1,6 +1,5 @@
 import PrimaryButton from "./primary-button";
 import "./start-main.css";
-import read from "../assets/Photo-one.png";
 import { Link } from "react-router-dom";
 
 function StartMain() {

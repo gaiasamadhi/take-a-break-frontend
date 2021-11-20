@@ -1,21 +1,14 @@
-import {
-  Switch,
-  Route,
-  useParams,
-  useRouteMatch,
-  useHistory,
-} from "react-router-dom";
+import { Switch, Route, useHistory } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Start from "./pages/start";
 import StepOne from "./pages/step-one";
-
 import StepTwo from "./pages/step-two";
 import StepThree from "./pages/step-three";
 import Symptoms from "./pages/symptoms";
 import Preferences from "./pages/preferences";
-
 import Activity from "./pages/Activity";
+import Admin from "./pages/Admin";
 import Finish from "./pages/Finish";
 import Feedback from "./pages/Feedback";
 import FeedbackFinish from "./pages/FeedbackFinish";
@@ -78,10 +71,19 @@ function Routes() {
         />
       </Route>
       <Route path="/step-four/symptoms">
-        <Symptoms activity={activity} shortBreak={shortBreak} mediumBreak={mediumBreak} longBreak={longBreak}/>
+        <Symptoms
+          activity={activity}
+          shortBreak={shortBreak}
+          mediumBreak={mediumBreak}
+          longBreak={longBreak}
+        />
       </Route>
       <Route path="/step-four/:preferences">
-        <Preferences shortBreak={shortBreak} mediumBreak={mediumBreak} longBreak={longBreak}/>
+        <Preferences
+          shortBreak={shortBreak}
+          mediumBreak={mediumBreak}
+          longBreak={longBreak}
+        />
       </Route>
       <Route path="/step-three">
         <StepThree
@@ -102,6 +104,9 @@ function Routes() {
       </Route>
       <Route path="/submitted">
         <FeedbackFinish />
+      </Route>
+      <Route path="/admin">
+        <Admin />
       </Route>
     </Switch>
   );
