@@ -407,8 +407,8 @@ input[type="range"]::-webkit-slider-thumb::before {
 }
 
 .adminPage {
-  width: 100vw;
-  height: 100vh;
+  /* width: 100vw; */
+  /* height: 100vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -417,7 +417,17 @@ input[type="range"]::-webkit-slider-thumb::before {
   background-repeat: no-repeat;
   background-position: bottom right;
   background-size: 40%;
+  padding-top: 20px;
 }
+.adminBenefits {
+  display: flex;
+  flex-direction: row;
+  width: 40vw;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 @media(max-width: 990px) {
   .activityPage {
     height: 100vh;
