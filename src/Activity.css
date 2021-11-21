@@ -405,6 +405,29 @@ input[type="range"]::-webkit-slider-thumb::before {
 .logoSection h4 {
   font-size: 24px;
 }
+
+.adminPage {
+  /* width: 100vw; */
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("./assets/Photo-one.png");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 40%;
+  padding-top: 20px;
+}
+.adminBenefits {
+  display: flex;
+  flex-direction: row;
+  width: 40vw;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 @media(max-width: 990px) {
   .activityPage {
     height: 100vh;

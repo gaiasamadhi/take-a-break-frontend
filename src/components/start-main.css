@@ -21,34 +21,6 @@
     align-items: center;
     margin-top: 100px;
 }
-/* .main-row__header {
-    width: 54%;
-    margin-top: 200px;
-    font-size: 64px;
-    line-height: 52.5px;
-}
-
-.main-row__content {
-    width: 51.56%;
-    margin-top: 36px;
-    margin-bottom: 85px;
-    font-size: 24px;
-    line-height: 33.75px;
-} */
-/* .main-row-image{
-    display:flex;
-    justify-content: flex-end;
-    margin-top: -249px;
-}
-
-.main-row-image-wrapper {
-    z-index: 1;
-    width:50%;
-}
-
-.main-row-image-wrapper__image {
-    width:100%;
-} */
 
 .title {
     font-size: 64px;
