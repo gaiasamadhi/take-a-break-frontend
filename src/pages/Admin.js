@@ -84,6 +84,7 @@ export default function Admin() {
           console.log(error.message);
         }
       });
+      
   }
   useEffect(async () => {
     axios.get(benefitAPI).then(
