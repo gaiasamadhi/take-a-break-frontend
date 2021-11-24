@@ -3,10 +3,10 @@ import Countdown, { zeroPad } from "react-countdown";
 import marker from "../assets/plus_1.png";
 import arrow from "../assets/Arrow.png";
 import logo from '../assets/logo6.png'
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 
-export default function Activity({ activity }) {
+export default function Activity({ activity, shortBreak, mediumBreak, longBreak }) {
   const timerRef = useRef();
   const handleStart = () => {
     timerRef.current.start();
@@ -23,11 +23,26 @@ export default function Activity({ activity }) {
       {zeroPad(minutes)}:{zeroPad(seconds)}
     </span>
   );
-  console.log(timerRef.current);
+  // console.log(timerRef.current);
+  const [filtered, setFiltered] = useState([])
   const activityID = useParams();
   const filteredActivity = activity.filter((act) => act._id === activityID.id);
   console.log(filteredActivity);
+  console.log(shortBreak)
+  console.log(mediumBreak)
+  console.log(longBreak)
   const [autoplay, setAutoplay] = useState("");
+  useEffect(()=>{
+    if(shortBreak){
+      setFiltered(shortBreak.filter((act)=> act._id === activityID.id))
+    } else if(mediumBreak){
+      setFiltered(mediumBreak.filter((act) => act._id === activityID.id))
+    } else{
+      setFiltered(longBreak.filter((act) => act._id === activityID.id))
+    }
+  },[])
+ 
+  console.log(filtered)
   return (
     <div className="activityPage">
       <div className="restart-break">

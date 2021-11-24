@@ -94,7 +94,12 @@ function Routes() {
         />
       </Route>
       <Route path="/activity/:id">
-        <Activity activity={activity} />
+        <Activity
+          activity={activity}
+          shortBreak={shortBreak}
+          mediumBreak={mediumBreak}
+          longBreak={longBreak}
+        />
       </Route>
       <Route path="/finish">
         <Finish activity={activity} />
