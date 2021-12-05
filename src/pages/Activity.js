@@ -3,9 +3,8 @@ import Countdown, { zeroPad } from "react-countdown";
 import marker from "../assets/plus_1.png";
 import arrow from "../assets/Arrow.png";
 import logo from '../assets/logo6.png'
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-
 export default function Activity({ activity, shortBreak, mediumBreak, longBreak }) {
   const timerRef = useRef();
   const handleStart = () => {
@@ -13,17 +12,14 @@ export default function Activity({ activity, shortBreak, mediumBreak, longBreak 
     setAutoplay("?autoplay=1");
   };
   const handleRestart = (e) => {
-    // console.log(e)
     timerRef.current.stop()
     handleStart()
-  }
-  const handlePause = () => timerRef.current.pause();
+  }  
   const renderer = ({ minutes, seconds }) => (
     <span>
       {zeroPad(minutes)}:{zeroPad(seconds)}
     </span>
   );
-  // console.log(timerRef.current);
   const [filtered, setFiltered] = useState([])
   const activityID = useParams();
   const filteredActivity = activity.filter((act) => act._id === activityID.id);
@@ -32,22 +28,14 @@ export default function Activity({ activity, shortBreak, mediumBreak, longBreak 
   console.log(mediumBreak)
   console.log(longBreak)
   const [autoplay, setAutoplay] = useState("");
-  useEffect(()=>{
-    if(shortBreak){
-      setFiltered(shortBreak.filter((act)=> act._id === activityID.id))
-    } else if(mediumBreak){
-      setFiltered(mediumBreak.filter((act) => act._id === activityID.id))
-    } else{
-      setFiltered(longBreak.filter((act) => act._id === activityID.id))
-    }
-  },[])
+
  
   console.log(filtered)
   return (
     <div className="activityPage">
       <div className="restart-break">
         <div className="logoSection">
-        <img src={logo} className="logo"/><h4 style={{marginLeft:"16px"}}>Recharge</h4>
+        <Link to="/"><img src={logo} className="logo"/></Link><h4 style={{marginLeft:"16px"}}>Recharge</h4>
         </div>
         <button onClick={handleRestart} className="restart-button">Restart Break</button>
       </div>
@@ -90,7 +78,7 @@ export default function Activity({ activity, shortBreak, mediumBreak, longBreak 
             <div className="breakDescriptionContainer">
               <h2>{act.name}</h2>
               <div className="activityDescription">
-                <p>{act.description}</p>
+                <p style={{whiteSpace: "pre-wrap"}}>{act.description}</p>
               </div>
             </div>
             <div className="breakDescriptionContainer">

@@ -7,7 +7,7 @@
   background-repeat: no-repeat;
   background-size: 30%;
   background-position: right bottom;
-  height: 100vh;
+  height: 100%;
 }
 
 .feedbackPage2, .finishedActivity {
@@ -27,11 +27,11 @@
   background-size: 25%;
 }
 .feedbackPage2 {
-  height: 100vh;
+  height: 87vh;
   background-image:url('/src/assets/Saly-6.png');
   background-repeat:no-repeat;
   background-position:center;
-  background-size: 60%;
+  background-size: 53%;
 }
 .bg {
   overflow: "hidden";
@@ -428,6 +428,27 @@ input[type="range"]::-webkit-slider-thumb::before {
   flex-wrap: wrap;
 }
 
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer h6 {
+  margin-bottom: 0px;
+  font-size: 12px;
+}
+.footerLine {
+  width: 70%;
+  border-top: 1px solid black;
+}
+.footerNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+}
 @media(max-width: 990px) {
   .activityPage {
     height: 100vh;
