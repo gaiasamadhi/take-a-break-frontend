@@ -39,8 +39,8 @@ export default function Admin() {
       ...activity,
       [name]: [...activity.preference, value],
     };
-
-    setActivity(newPreference);
+    if(e.target.checked){setActivity(newPreference)}
+    // else if(!e.target.checked)(setActivity(newPreference.preference.splice(newPreference.preference.indexOf(e.target.value), 1)))
   }
   const handleActivityBenefits = (e) => {
     const {name, value} = e.target
@@ -84,7 +84,15 @@ export default function Admin() {
           console.log(error.message);
         }
       });
-      
+      setActivity({
+        name: "",
+        duration: 0,
+        source: "",
+        preference: [],
+        description: "",
+        benefits: [],
+        symptoms: []
+      })
   }
   useEffect(async () => {
     axios.get(benefitAPI).then(
