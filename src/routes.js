@@ -12,7 +12,7 @@ import Admin from "./pages/Admin";
 import Finish from "./pages/Finish";
 import Feedback from "./pages/Feedback";
 import FeedbackFinish from "./pages/FeedbackFinish";
-
+import About from './pages/About'
 const activityAPI = "https://recharge-backend1.herokuapp.com/activities";
 function Routes() {
   const [activity, setActivity] = useState([]);
@@ -112,6 +112,9 @@ function Routes() {
       </Route>
       <Route path="/admin">
         <Admin />
+      </Route>
+      <Route path="/about-us">
+        <About />
       </Route>
     </Switch>
   );

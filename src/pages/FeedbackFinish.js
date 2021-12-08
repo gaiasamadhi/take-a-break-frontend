@@ -1,7 +1,7 @@
 import "../Activity.css";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo6.png";
-
+import  Footer from '../components/footer'
 export default function FeedbackFinish() {
   return (
     <>
@@ -17,16 +17,7 @@ export default function FeedbackFinish() {
         </div>
         <div className="finalMessage"></div>
       </div>
-      <div className="footer">
-        <div className="footerNav">
-          <Link to="/" style={{textDecoration: "none", color: "black"}}>FEATURES</Link>
-          <Link to="/" style={{textDecoration: "none", color: "black"}}>ABOUT US</Link>
-          <Link to="/" style={{textDecoration: "none", color: "black"}}>FAQs</Link>
-          <Link to="/" style={{textDecoration: "none", color: "black"}}>REQUEST A FEATURE</Link>
-        </div>
-        <div className="footerLine"></div>
-        <h6>Copyright @ 2021 PEMM. All rights reserved.</h6>
-      </div>
+        <Footer />
     </>
   );
 }
