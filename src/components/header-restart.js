@@ -5,6 +5,7 @@ function HeaderRestart() {
     <div className="header-restart-wrapper">
       <nav className="header-restart-row">
         <img src={logo} className="logo"/><li className="header-restart-row__team">Recharge</li>
+        
       </nav>
     </div>
   );
