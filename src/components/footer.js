@@ -7,7 +7,7 @@ export default function Footer() {
       <Link to="/" style={{ textDecoration: "none", color: "black" }}>
         FEATURES
       </Link>
-      <Link to="/about-us" style={{ textDecoration: "none", color: "black" }}>
+      <Link to="/about" style={{ textDecoration: "none", color: "black" }}>
         ABOUT US
       </Link>
       <Link to="/" style={{ textDecoration: "none", color: "black" }}>
