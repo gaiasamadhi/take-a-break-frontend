@@ -13,10 +13,11 @@ import Finish from "./pages/Finish";
 import Feedback from "./pages/Feedback";
 import FeedbackFinish from "./pages/FeedbackFinish";
 import About from "./pages/About";
+import Features from "./pages/Features";
 
 const activityAPI = "https://recharge-backend1.herokuapp.com/activities";
 
-function Routes() {
+function Routes({theme, setTheme}) {
   const [activity, setActivity] = useState([]);
 
   useEffect(() => {
@@ -28,6 +29,7 @@ function Routes() {
         console.log(error);
       }
     );
+    console.log(theme)
   }, []);
   const [shortBreak, setShortBreak] = useState([]);
   const [mediumBreak, setMediumBreak] = useState([]);
@@ -62,6 +64,8 @@ function Routes() {
           mediumBreak={mediumBreak}
           shortBreak={shortBreak}
           activity={activity}
+          theme={theme}
+          setTheme={setTheme}
         />
       </Route>
 
@@ -118,6 +122,9 @@ function Routes() {
       </Route>
       <Route path="/about">
         <About />
+      </Route>
+      <Route path="/features">
+        <Features />
       </Route>
     </Switch>
   );
