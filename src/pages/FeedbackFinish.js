@@ -6,7 +6,7 @@ export default function FeedbackFinish() {
   return (
     <>
       <div className="feedbackPage2">
-        <div className="restart-break">
+        {/* <div className="restart-break">
           <div className="logoSection">
             <img src={logo} className="logo" />
             <h4 style={{ marginLeft: "16px" }}>Recharge</h4>
@@ -14,7 +14,7 @@ export default function FeedbackFinish() {
           <Link to="/step-one">
             <button className="start-break">Take a break</button>
           </Link>
-        </div>
+        </div> */}
         <div className="finalMessage"></div>
       </div>
         <Footer />

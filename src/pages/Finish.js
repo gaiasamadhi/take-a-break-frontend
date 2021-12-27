@@ -7,12 +7,7 @@ export default function Finish() {
   console.log(history);
   return (
     <div className="finishedActivity">
-      <div className="restart-break">
-        <div className="logoSection">
-          <img src={logo} className="logo" />
-          <h4 style={{ marginLeft: "16px" }}>Recharge</h4>
-        </div>
-      </div>
+     
       <div className="finish">
         <div className="finishButtons">
           <h2>Congrats on finishing your activity!</h2>

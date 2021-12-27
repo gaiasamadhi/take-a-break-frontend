@@ -33,12 +33,12 @@ export default function Activity({ activity, shortBreak, mediumBreak, longBreak 
   console.log(filtered)
   return (
     <div className="activityPage">
-      <div className="restart-break">
+      {/* <div className="restart-break">
         <div className="logoSection">
         <Link to="/"><img src={logo} className="logo"/></Link><h4 style={{marginLeft:"16px"}}>Recharge</h4>
         </div>
         <button onClick={handleRestart} className="restart-button">Restart Break</button>
-      </div>
+      </div> */}
       {filteredActivity.map((act) => (
         <>
           <div className="player">

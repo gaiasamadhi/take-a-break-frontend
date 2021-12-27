@@ -4,6 +4,8 @@ import sunshine from "../assets/highlight_05.png";
 import linkedin from "../assets/linkedin.png";
 import link from "../assets/link.png";
 import highlight from "../assets/Highlight10.png";
+import story from "../../src/story";
+
 export default function About() {
   const team = [
     {
@@ -100,6 +102,9 @@ export default function About() {
         >
           <h1 style={{ position: "absolute", left: "38%" }}>The Story</h1>
           <img src={highlight} />
+        </div>
+        <div className="storyContainer">
+          <p className="story">{story.story}</p>
         </div>
       </div>
       <img src={rocket} style={{ width: "20%", alignSelf: "flex-start" }} />
