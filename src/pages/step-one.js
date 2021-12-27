@@ -5,7 +5,7 @@ function StepOne({activity, handleBreakDuration1, handleBreakDuration2, handleBr
     console.log(theme)
     return (
       <div className="App">
-        <HeaderRestart theme={theme} setTheme={setTheme}/>
+        {/* <HeaderRestart /> */}
         <StepOneMain activity={activity} handleBreakDuration3={handleBreakDuration3} handleBreakDuration2={handleBreakDuration2} handleBreakDuration1={handleBreakDuration1}/>
       </div>
     );

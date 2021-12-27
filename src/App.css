@@ -6,3 +6,83 @@ body {
   background: transparent;
 }
 
+/* The switch - the box around the modeSlider */
+.toggleTheme {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  height: 27px;
+  margin: 6px 18px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The modeSlider */
+.modeSlider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #57417c;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.modeSlider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 8px;
+  bottom: 6px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .modeSlider {
+  background-color: #57417c;
+}
+
+input:focus + .modeSlider {
+  box-shadow: 0 0 1px #57417c;
+}
+
+input:checked + .modeSlider:before {
+  -webkit-transform: translateX(69px);
+  -ms-transform: translateX(69px);
+  transform: translateX(69px);
+}
+
+/* Rounded modeSliders */
+.modeSlider.roundToggle {
+  border-radius: 34px;
+}
+
+.modeSlider.roundToggle:before {
+  border-radius: 50%;
+}
+
+.appHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.recharge {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+@media (max-width: 550px) {
+  .switch {
+    width: 100px;
+    height: 44px;
+  }
+}

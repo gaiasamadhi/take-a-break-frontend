@@ -7,18 +7,8 @@ function HeaderRestart({ theme, setTheme }) {
   return (
     <div className="header-restart-wrapper">
       <nav className="header-restart-row">
-        <img src={logo} className="logo" />
         <li className="header-restart-row__team">Recharge</li>
-        {/* <button
-          onClick={(e) =>
-            setTheme(
-              theme.mode === "dark" ? { mode: "light" } : { mode: "dark" }
-            )
-          }
-          style={{ width: "75px", background: "white", cursor: "pointer" }}
-        >
-          {theme.mode === "dark" ? "Light Theme" : "Dark Theme"}
-        </button> */}
+        <img src={logo} className="logo" />
       </nav>
     </div>
   );
