@@ -21,5 +21,26 @@
     width: 100%;
 }
 .story {
-    width: 50%
+    width: 50%;
+    text-align: initial;
+}
+
+.feedbackContainer1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.feedbackContainer2 {
+    width: 30%;
+    padding: 40px;
+}
+
+.feedback {
+    text-align: center;
+}
+.mark {
+    display: flex;
+    justify-content: center;
 }

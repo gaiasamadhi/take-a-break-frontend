@@ -5,6 +5,12 @@ import linkedin from "../assets/linkedin.png";
 import link from "../assets/link.png";
 import highlight from "../assets/Highlight10.png";
 import story from "../../src/story";
+import { useState, useEffect } from "react";
+import axios from "axios";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import maxRating from '../assets/3-stars.png';
 
 export default function About() {
   const team = [
@@ -57,8 +63,22 @@ export default function About() {
       },
     },
   ];
-  const imageBorder =
-    "https://ik.imagekit.io/vvd9qbmes2h/Recharge/coffee/cup_rP4N3rujO.png";
+
+  const feedbackAPI = "https://recharge-backend1.herokuapp.com/feedback";
+
+  const [feedback, setFeedback] = useState([]);
+
+  const settings = {
+    dots: true,
+    autoplay: true
+  };
+
+  useEffect(() => {
+    axios.get(feedbackAPI).then((res) => {
+      setFeedback(res.data);
+    });
+  }, []);
+  console.log(feedback.slice(0, 5));
   return (
     <>
       <div className="about">
@@ -104,10 +124,25 @@ export default function About() {
           <img src={highlight} />
         </div>
         <div className="storyContainer">
-          <p className="story">{story.story}</p>
+          <p className="story" style={{whiteSpace: "pre-wrap"}}>{story.story}</p>
         </div>
       </div>
       <img src={rocket} style={{ width: "20%", alignSelf: "flex-start" }} />
+      <div className="feedbackContainer1">
+        <h3>What users say about Recharge:</h3>
+        <div className="feedbackContainer2">
+          <Slider {...settings}>
+            {feedback.slice(0, 5).map((f) => (
+              <div className="feedback">
+                <div className="mark">
+                {f.mark === 3 ? <img src={maxRating} width={"10%"} /> : <p>Lame</p> }
+                </div>
+                <p>{f.comment}</p>
+              </div>
+            ))}
+          </Slider>
+        </div>
+      </div>
     </>
   );
 }
